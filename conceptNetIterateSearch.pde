@@ -3,7 +3,7 @@
 // when reach limit, go one level down further
 
 final int edgeLimit = 5;
-final int levelLimit = 3;
+final int levelLimit = 5;
 
 final String path = "http://conceptnet5.media.mit.edu/data/5.2";
 
@@ -15,8 +15,11 @@ String[] resultsTrackerRelString = new String[levelLimit];  // trying to record 
 
 //int offset = 0; 
 int[] offsetArray = new int[levelLimit];
-int currentLevel = 0; 
+char[] offsetChar = new char[levelLimit]; //just to test
+int whichToIncr = 0; // for testing above
+//int currentLevel = 0; 
 //boolean offsetChanged = false;
+boolean decrementing = false; 
 
 String nextPath = "/c/en/person";
 
@@ -28,10 +31,11 @@ String[] prevPaths = new String[levelLimit];
 void setup() {
   size(400, 400);
   background(250);
-  frameRate(7);
+  frameRate(10);
 
   for (int i = 0; i < levelLimit; i++) {
     offsetArray[i] = 0;
+    offsetChar[i] = 'O';
     prevPaths[i] = "";
   }
 }
@@ -60,21 +64,20 @@ void draw() {
     print(offsetArray[i]+ " - ");
   }
   println();
+  
+  print("which result: ");
+  for (int i = 0; i < offsetChar.length; i++) {
+    if (whichToIncr == i) {
+      print("X - ");
+    } else {
+      print("O - ");
+    }
+    //print(offsetChar[i]+ " - ");
+  }
+  println();
+  println();
   //recurseUp(0);
   recurseDown(levelLimit-1);
-
-  //    if (currentLevel < levelLimit - 1) {   //if currentlevel is not at max level
-  //      nextPath = newEdge.finalPath;
-  //      currentLevel++;
-  //    } else {
-  //      if (offsetArray[currentLevel] < edgeLimit - 1) { // if the offset is not at max edge, use the same search
-  //        offsetArray[currentLevel]++;
-  //      } else {
-  //        currentLevel--; 
-  //        nextPath = prevPaths[currentLevel];  //send the prev path to nextPath so it searches the correct node.
-  //        offsetArray[currentLevel]++;
-  //      }
-  //    }
 
   //}
   //offsetChanged = false;
@@ -92,13 +95,27 @@ public void recurseDown(int currentLevel) {
     println("done");
     return;
   }
-  Edge newEdge = getEdgeOf(false, "", "", nextPath, offsetArray[currentLevel], 1);
+  //Edge newEdge = getEdgeOf(false, "", "", nextPath, offsetArray[currentLevel], 1);
   //println("offset: " + offsetArray[currentLevel] + " at level: " + currentLevel + " edge: " + newEdge.finalName);
+  
+  if (whichToIncr < levelLimit - 1 && decrementing == false) {
+    whichToIncr++;
+    //println("incrementing current offset position to increment");
+    return;
+  }
+  if (decrementing == true) {
+    decrementing = false;
+  }
+  
   if (offsetArray[currentLevel] < edgeLimit - 1) { 
     offsetArray[currentLevel]++;
+    //println("incrementing offset");
   } else { 
     offsetArray[currentLevel] = 0;
     //nextPath = newEdge.finalPath; //
+    whichToIncr--;
+    //println("decrementing current offset position to increment");
+    decrementing = true;
     recurseDown(currentLevel - 1);
   }
 }
