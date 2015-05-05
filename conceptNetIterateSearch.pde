@@ -23,6 +23,8 @@ String nextPath = "/c/en/person";
 
 String[] prevPaths = new String[levelLimit]; 
 
+boolean done = false;
+
 void setup() {
   size(400, 400);
   background(250);
@@ -53,13 +55,13 @@ void draw() {
   //  }
   //  println();
 
-
-  println();
   //println("offset for the current search: " + offsetArray[whichToIncr]);
   //println("saved current position: " + prevPaths[whichToIncr]);  
   //println();
 
-  recurseDown(levelLimit-1);
+  if (done == false) {
+    recurseDown(levelLimit-1);
+  }
 }
 
 
@@ -67,6 +69,7 @@ void draw() {
 public void recurseDown(int currentLevel) {
   if (currentLevel < 0) {
     println("done");
+    done = true; 
     return;
   }
   //Edge newEdge = getEdgeOf(false, "", "", nextPath, offsetArray[currentLevel], 1);
@@ -87,29 +90,43 @@ public void recurseDown(int currentLevel) {
   }
   println("path to search is " + nextPath);
   Edge newEdge = getEdgeOf(false, "", "", nextPath, offsetArray[whichToIncr], 1);
-  println("FINAL NAME: " + newEdge.finalName);
-  println("FINAL PATH: " + newEdge.finalPath);
-  prevPaths[whichToIncr] = newEdge.finalPath;
-  println();
-
-  if (whichToIncr < levelLimit - 1 && decrementing == false) {
-    whichToIncr++;  //increment level position to increment if its lower than level limit and not decrementing
-    nextPath = newEdge.finalPath;    //update nextPath to go a level deeper
-    return;
-  }
-  if (decrementing == true) {
-    decrementing = false;
-  }
-
-  if (offsetArray[currentLevel] < edgeLimit - 1) { 
-    offsetArray[currentLevel]++;  //increment offset at current level position
-    //nextPath doesn't change, uses current one, just changes offset
-  } else { 
+  if (newEdge == null) {
+    println("this edge no existy, moving back a level");
+    println();
     offsetArray[currentLevel] = 0;
-    whichToIncr--;
+    if (whichToIncr > 0) {
+      whichToIncr--;
+    }
     decrementing = true;
     nextPath = prevPaths[whichToIncr];
     recurseDown(currentLevel - 1);
+  } else {
+    println("FINAL NAME: " + newEdge.finalName);
+    println("FINAL PATH: " + newEdge.finalPath);
+    prevPaths[whichToIncr] = newEdge.finalPath;
+    println();
+
+    if (whichToIncr < levelLimit - 1 && decrementing == false) {
+      whichToIncr++;  //increment level position to increment if its lower than level limit and not decrementing
+      nextPath = newEdge.finalPath;    //update nextPath to go a level deeper
+      return;
+    }
+    if (decrementing == true) {
+      decrementing = false;
+    }
+
+    if (offsetArray[currentLevel] < edgeLimit - 1) { 
+      offsetArray[currentLevel]++;  //increment offset at current level position
+      //nextPath doesn't change, uses current one, just changes offset
+    } else { 
+      offsetArray[currentLevel] = 0;
+      if (whichToIncr > 0) {
+        whichToIncr--;
+      }
+      decrementing = true;
+      nextPath = prevPaths[whichToIncr];
+      recurseDown(currentLevel - 1);
+    }
   }
 }
 
@@ -139,6 +156,12 @@ public Edge getEdgeOf(boolean relTrue, String pathRel, String startOrEnd, String
     e.printStackTrace();
     return null;
   } 
+
+  //  if (json.hasKey("edges")) {
+  //    println("has array of edges");
+  //  } else {
+  //    println("no array of edges!!");
+  //  }
   JSONArray jsonEdges = json.getJSONArray("edges");
   JSONObject edge;
   String startLemmas, endLemmas, start, end, rel;
@@ -147,43 +170,50 @@ public Edge getEdgeOf(boolean relTrue, String pathRel, String startOrEnd, String
   boolean omit = false;
   Edge thisEdge;
 
+  if (jsonEdges.size() != 0) {
+    println("has array of edges");
 
-  //for (int i = 0; i < theseEdges.length; i++) {
-  edge = jsonEdges.getJSONObject(0);
-  startLemmas = edge.getString("startLemmas");
-  endLemmas = edge.getString("endLemmas");
-  start = edge.getString("start");
-  end = edge.getString("end");
-  rel = edge.getString("rel"); 
 
-  //get name and path
-  if (end.equals(start)) {
-    finalName = "REPEAT!";
-    finalPath = "REPEAT!";
-    omit = true;
-  } else if (end.contains(otherObject)) { 
-    String splitString[] = split(start, "/");
-    finalName = splitString[3];
-    finalPath = start;
-  } else if (start.contains(otherObject)) {
-    String splitString[] = split(end, "/");
-    finalName = splitString[3];
-    finalPath = end;
+    //for (int i = 0; i < theseEdges.length; i++) {
+    edge = jsonEdges.getJSONObject(0);
+    startLemmas = edge.getString("startLemmas");
+    endLemmas = edge.getString("endLemmas");
+    start = edge.getString("start");
+    end = edge.getString("end");
+    rel = edge.getString("rel"); 
+
+    //get name and path
+    if (end.equals(start)) {
+      finalName = "REPEAT!";
+      finalPath = "REPEAT!";
+      omit = true;
+    } else if (end.contains(otherObject)) { 
+      String splitString[] = split(start, "/");
+      finalName = splitString[3];
+      finalPath = start;
+    } else if (start.contains(otherObject)) {
+      String splitString[] = split(end, "/");
+      finalName = splitString[3];
+      finalPath = end;
+    } else {
+      finalName = "???";
+      finalPath = "???";
+    }
+
+    thisEdge = new Edge(startLemmas, endLemmas, start, end, rel, finalName, finalPath, level, omit);
+    //    println("edge number " + i + ":" + "\n" +
+    //        "\t" + "start = " + start + "\n" + 
+    //        "\t" + "end = " + end + "\n" + 
+    //        "\t" + "finalPath = " + finalPath + "\n" + 
+    //        "\t" + "finalName = " + finalName + "\n" + 
+    //        "\t" + "relation = " + rel + "\n" + 
+    //        "\t" + "level = " + level);
+    //}
+    return thisEdge;
   } else {
-    finalName = "???";
-    finalPath = "???";
+    println("no array of edges!!");
+    return null;
   }
-
-  thisEdge = new Edge(startLemmas, endLemmas, start, end, rel, finalName, finalPath, level, omit);
-  //    println("edge number " + i + ":" + "\n" +
-  //        "\t" + "start = " + start + "\n" + 
-  //        "\t" + "end = " + end + "\n" + 
-  //        "\t" + "finalPath = " + finalPath + "\n" + 
-  //        "\t" + "finalName = " + finalName + "\n" + 
-  //        "\t" + "relation = " + rel + "\n" + 
-  //        "\t" + "level = " + level);
-  //}
-  return thisEdge;
 } 
 
 public String getPath(String searchObject, boolean relTrue, String relString, String startOrEnd, int limitNum, int offsetNum) { 
