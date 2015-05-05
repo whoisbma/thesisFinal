@@ -2,7 +2,7 @@
 // search one object at a time, increment individual counter
 // when reach limit, go one level down further
 
-final int edgeLimit = 3;
+final int edgeLimit = 10;
 final int levelLimit = 5;
 
 final String path = "http://conceptnet5.media.mit.edu/data/5.2";
@@ -29,7 +29,7 @@ boolean done = false;
 void setup() {
   size(400, 400);
   background(250);
-  frameRate(3);
+  //frameRate(3);
 
   for (int i = 0; i < levelLimit; i++) {
     offsetArray[i] = 0;
@@ -94,36 +94,38 @@ public void recurseDown(int currentLevel) {
     print(prevPaths[i] + " - ");
   }
   println();
-  println("node to search is " + nextPath);
+  print("searching: " + nextPath + ", ");
   Edge newEdge = getEdgeOf(false, "", "", nextPath, offsetArray[whichToIncr], 1);
   if (newEdge == null) {
-    println("this edge no existy, moving back a level");
+    println("found: NULL!!");
     println();
+
+    //    offsetArray[currentLevel] = 0;
+    //    if (whichToIncr > 0) {
+    //      whichToIncr--;
+    //      nextPath = prevPaths[whichToIncr];
+    //    }
+    //    decrementing = true;
+    //    recurseDown(currentLevel - 1);
+    //    
 
     offsetArray[currentLevel] = 0;
     if (whichToIncr > 0) {
       whichToIncr--;
-      nextPath = prevPaths[whichToIncr-1];
+      if (whichToIncr > 0) {
+        nextPath = prevPaths[whichToIncr-1];
+      }
     }
     decrementing = true;
     recurseDown(currentLevel - 1);
-  } else if (newEdge.omit == true) {    //should it be omitted?
-    //is it last in the offset?
-    if (offsetArray[currentLevel] < edgeLimit - 1) { 
-      offsetArray[currentLevel]++;  //increment offset at current level position
-    //nextPath doesn't change, uses current one, just changes offset
-    } else { 
-      offsetArray[currentLevel] = 0;
-      if (whichToIncr > 0) {
-        whichToIncr--;
-        nextPath = prevPaths[whichToIncr-1];
-      }
-      decrementing = true;
-      recurseDown(currentLevel - 1);
-    }
+//  } else if (newEdge.omit == true) {    //should it be omitted?
+//    println("OMIT!!");
+//    println();
+
+
   } else {
-    println("FINAL NAME: " + newEdge.finalName);
-    println("FINAL PATH: " + newEdge.finalPath);
+    //println("FINAL NAME: " + newEdge.finalName);
+    println("found: " + newEdge.finalPath);
     prevPaths[whichToIncr] = newEdge.finalPath;
 
     if (newEdge.omit == true) {
@@ -138,7 +140,7 @@ public void recurseDown(int currentLevel) {
     println();
     println();
 
-    if (whichToIncr < levelLimit - 1 && decrementing == false) {
+    if (whichToIncr < (levelLimit - 1) && decrementing == false) {
       whichToIncr++;  //increment level position to increment if its lower than level limit and not decrementing
       nextPath = newEdge.finalPath;    //update nextPath to go a level deeper
       return;
@@ -147,15 +149,23 @@ public void recurseDown(int currentLevel) {
       decrementing = false;
     }
 
-    if (offsetArray[currentLevel] < edgeLimit - 1) { 
+    if (offsetArray[currentLevel] < (edgeLimit - 1)) { 
       offsetArray[currentLevel]++;  //increment offset at current level position
       //nextPath doesn't change, uses current one, just changes offset
-    } else { 
+    } else {
       offsetArray[currentLevel] = 0;
       if (whichToIncr > 0) {
         whichToIncr--;
-        nextPath = prevPaths[whichToIncr-1];
+        if (whichToIncr > 0) {
+          nextPath = prevPaths[whichToIncr-1];
+        } else {
+          nextPath = firstPath;
+        }
+        //      } else {
+        //        whichToIncr = 0;
+        //        nextPath = prevPaths[0];
       }
+
       decrementing = true;
       recurseDown(currentLevel - 1);
     }
@@ -202,7 +212,9 @@ public Edge getEdgeOf(boolean relTrue, String pathRel, String startOrEnd, String
       finalName = "REPEAT!";
       finalPath = "REPEAT!";
       omit = true;
-    } else if (end.contains(otherObject)) { 
+    }  
+    //this normally is an else if. but i'm getting bugs because i can't exclude the omits right now. so still giving them names and paths.
+    /*else*/ if (end.contains(otherObject)) { 
       String splitString[] = split(start, "/");
       finalName = splitString[3];
       finalPath = start;
@@ -216,8 +228,8 @@ public Edge getEdgeOf(boolean relTrue, String pathRel, String startOrEnd, String
     }
 
     //add an omit condition based on if it matches any path in the search chain?
-    for (int i = 0; i < prevPaths.length; i++) {
-      if (prevPaths[i].equals(finalPath)) {
+    for (int i = 0; i < whichToIncr; i++) {
+      if (prevPaths[i].equals(finalPath) || finalPath.equals(firstPath)) {
         omit = true;
       }
     }
@@ -233,7 +245,7 @@ public Edge getEdgeOf(boolean relTrue, String pathRel, String startOrEnd, String
     //}
     return thisEdge;
   } else {
-    println("no array of edges!!");
+    //println("no array of edges!!");
     return null;
   }
 } 
