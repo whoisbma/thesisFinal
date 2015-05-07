@@ -29,7 +29,7 @@ boolean done = false;
 void setup() {
   size(400, 400);
   background(250);
-  //frameRate(3);
+  frameRate(30);
 
   for (int i = 0; i < levelLimit; i++) {
     offsetArray[i] = 0;
@@ -39,34 +39,11 @@ void setup() {
 }
 
 void draw() {
-  //  println("LEVEL = " + currentLevel);
-  //  println("OFFSET = " + offsetArray[currentLevel]);
-
-  //  Edge newEdge = getEdgeOf(false, "", "", nextPath, offsetArray[currentLevel], 1);
-  //  println("FINAL NAME: " + newEdge.finalName);
-  //  println("FINAL PATH: " + newEdge.finalPath);
-  //  prevPaths[whichToIncr] = newEdge.finalPath;
-  //  offsetArray[currentLevel]++;
-
-  //  prevPaths[currentLevel] = newEdge.finalPath;
-
-  //  print("prev paths: ");
-  //  for (int i = 0; i < prevPaths.length; i++) {
-  //    print(prevPaths[i]+ " - ");
-  //  }
-  //  println();
-
-  //println("offset for the current search: " + offsetArray[whichToIncr]);
-  //println("saved current position: " + prevPaths[whichToIncr]);  
-  //println();
-
   if (done == false) {
     recurseDown(levelLimit-1);
   }
 }
 
-
-//adapted from recurseTest2
 public void recurseDown(int currentLevel) {
   if (currentLevel < 0) {
     println("done");
@@ -114,15 +91,26 @@ public void recurseDown(int currentLevel) {
       whichToIncr--;
       if (whichToIncr > 0) {
         nextPath = prevPaths[whichToIncr-1];
+      } else {//else go to first starting path
+        nextPath = firstPath;
       }
     }
     decrementing = true;
     recurseDown(currentLevel - 1);
-//  } else if (newEdge.omit == true) {    //should it be omitted?
-//    println("OMIT!!");
-//    println();
-
-
+  } else if (newEdge.omit == true) {    //should it be omitted?
+    println("OMIT: " + newEdge.finalPath);
+    println();
+    offsetArray[currentLevel] = 0;
+    if (whichToIncr > 0) {
+      whichToIncr--;
+      if (whichToIncr > 0) {
+        nextPath = prevPaths[whichToIncr-1];
+      } else {//else go to first starting path
+        nextPath = firstPath;
+      }
+    }
+    decrementing = true;
+    recurseDown(currentLevel - 1);
   } else {
     //println("FINAL NAME: " + newEdge.finalName);
     println("found: " + newEdge.finalPath);
@@ -214,7 +202,7 @@ public Edge getEdgeOf(boolean relTrue, String pathRel, String startOrEnd, String
       omit = true;
     }  
     //this normally is an else if. but i'm getting bugs because i can't exclude the omits right now. so still giving them names and paths.
-    /*else*/ if (end.contains(otherObject)) { 
+    /*else*/    if (end.contains(otherObject)) { 
       String splitString[] = split(start, "/");
       finalName = splitString[3];
       finalPath = start;
