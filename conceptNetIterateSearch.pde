@@ -2,7 +2,14 @@
 // search one object at a time, increment individual counter
 // when reach limit, go one level down further
 
-final int edgeLimit = 10;
+//several potential problems:
+//1 - my logic on null and omit skips has an issue, especially if its in the "currentLevel" slot and not just skipping on its way towards it. probably a problem, yes.
+//2 - it does an extra path search more than necessary during a normal "pull back".
+//3 - in the last stage it resets all to zero while pulling back, apparently. not necessary to happen.
+
+
+
+final int edgeLimit = 5;
 final int levelLimit = 5;
 
 final String path = "http://conceptnet5.media.mit.edu/data/5.2";
@@ -19,6 +26,11 @@ char[] offsetChar = new char[levelLimit]; //just to test
 int whichToIncr = 0; // for testing above
 boolean decrementing = false; 
 
+int totalPaths = 0;
+int totalRecurses = 0;
+int totalOmits = 0;
+int totalNulls = 0;
+
 String firstPath = "/c/en/person";
 String nextPath = firstPath;
 
@@ -29,7 +41,7 @@ boolean done = false;
 void setup() {
   size(400, 400);
   background(250);
-  frameRate(30);
+  frameRate(2);
 
   for (int i = 0; i < levelLimit; i++) {
     offsetArray[i] = 0;
@@ -45,19 +57,27 @@ void draw() {
 }
 
 public void recurseDown(int currentLevel) {
+  totalRecurses++;
   if (currentLevel < 0) {
     println("done");
+    println("total paths: " + totalPaths);
+    println("total recurses: " + totalRecurses);
+    println("total omits: " + totalOmits);
+    println("total nulls: " + totalNulls);
     done = true; 
     return;
   }
 
+  //----------------------------------------------------------------------
+  //array prints----------------------------------------------------------
+  //----------------------------------------------------------------------
   print("offset array: ");
   for (int i = 0; i < offsetArray.length; i++) {
     print(offsetArray[i]+ " - ");
   }
   println();
 
-  print("which result: ");
+  print("whichToIncr:  ");
   for (int i = 0; i < offsetChar.length; i++) {
     if (whichToIncr == i) {
       print("X - ");
@@ -66,59 +86,96 @@ public void recurseDown(int currentLevel) {
     }
   }
   println();
+
+  print("currentLevel: ");
+  for (int i = 0; i < offsetChar.length; i++) {
+    if (currentLevel == i) {
+      print("! - ");
+    } else {
+      print(". - ");
+    }
+  }
+  println();
+
   print("search chain: " + firstPath + " --> ");
   for (int i = 0; i < whichToIncr; i++) {
     print(prevPaths[i] + " - ");
   }
   println();
+
+  //----------------------------------------------------------------------
+  //searching next path---------------------------------------------------
+  //----------------------------------------------------------------------
   print("searching: " + nextPath + ", ");
   Edge newEdge = getEdgeOf(false, "", "", nextPath, offsetArray[whichToIncr], 1);
+
+  //----------------------------------------------------------------------
+  //if new edge is null,--------------------------------------------------
+  //----------------------------------------------------------------------
   if (newEdge == null) {
+    totalNulls++;
     println("found: NULL!!");
     println();
-
-    //    offsetArray[currentLevel] = 0;
-    //    if (whichToIncr > 0) {
-    //      whichToIncr--;
-    //      nextPath = prevPaths[whichToIncr];
-    //    }
-    //    decrementing = true;
-    //    recurseDown(currentLevel - 1);
-    //    
-
-    offsetArray[currentLevel] = 0;
+    offsetArray[whichToIncr] = 0;
     if (whichToIncr > 0) {
       whichToIncr--;
       if (whichToIncr > 0) {
         nextPath = prevPaths[whichToIncr-1];
-      } else {//else go to first starting path
+      } else {
         nextPath = firstPath;
       }
     }
-    decrementing = true;
-    recurseDown(currentLevel - 1);
+
+    if (whichToIncr == levelLimit) {
+      println("whichToIncr == levelLimit, recursing and decrementing");
+      decrementing = true;
+      recurseDown(currentLevel);
+    } else {
+      decrementing = true;
+      recurseDown(whichToIncr);
+    }
+
+    //----------------------------------------------------------------------
+    //if new edge is to be omitted,-----------------------------------------
+    //----------------------------------------------------------------------
   } else if (newEdge.omit == true) {    //should it be omitted?
-    println("OMIT: " + newEdge.finalPath);
-    println();
-    offsetArray[currentLevel] = 0;
-    if (whichToIncr > 0) {
-      whichToIncr--;
+    totalOmits++;
+    print("found: " + newEdge.finalPath + " - OMIT - ");
+
+    if (offsetArray[whichToIncr] < (edgeLimit - 1)) { 
+      println("current position is below edge limit, increment.");
+      println();
+      offsetArray[whichToIncr]++;  //increment offset at current level position
+      //nextPath doesn't change, uses current one, just changes offset
+    } else {
+      println("current position is at edge limit, set it to 0 and decrease which to increment");
+      println();
+      offsetArray[whichToIncr] = 0;
       if (whichToIncr > 0) {
-        nextPath = prevPaths[whichToIncr-1];
-      } else {//else go to first starting path
-        nextPath = firstPath;
+        whichToIncr--;
+        if (whichToIncr > 0) {
+          nextPath = prevPaths[whichToIncr-1];
+        } else {
+          nextPath = firstPath;
+        }
+      }
+      if (whichToIncr == levelLimit) {
+        println("whichToIncr == levelLimit, recursing and decrementing");
+        decrementing = true;
+        recurseDown(currentLevel);
+      } else {
+        decrementing = true;
+        recurseDown(whichToIncr);
       }
     }
-    decrementing = true;
-    recurseDown(currentLevel - 1);
+
+    //----------------------------------------------------------------------
+    //normal case, proceed---------------------------------------------------
+    //----------------------------------------------------------------------
   } else {
-    //println("FINAL NAME: " + newEdge.finalName);
     println("found: " + newEdge.finalPath);
     prevPaths[whichToIncr] = newEdge.finalPath;
-
-    if (newEdge.omit == true) {
-      println("OMIT!!");
-    }
+    totalPaths++;
 
     print("current chain: " + firstPath + " --> ");
     for (int i = 0; i < whichToIncr; i++) {
@@ -128,7 +185,11 @@ public void recurseDown(int currentLevel) {
     println();
     println();
 
+
+    //increment index is lower than level limit and not decrementing - increment it-----------
+    //----------------------------------------------------------------------------------------
     if (whichToIncr < (levelLimit - 1) && decrementing == false) {
+      println("current position level is below max level number, increment.");
       whichToIncr++;  //increment level position to increment if its lower than level limit and not decrementing
       nextPath = newEdge.finalPath;    //update nextPath to go a level deeper
       return;
@@ -138,9 +199,11 @@ public void recurseDown(int currentLevel) {
     }
 
     if (offsetArray[currentLevel] < (edgeLimit - 1)) { 
+      println("current position is below edge limit, increment.");
       offsetArray[currentLevel]++;  //increment offset at current level position
       //nextPath doesn't change, uses current one, just changes offset
     } else {
+      println("current position is at edge limit, set it to 0 and decrease which to increment");
       offsetArray[currentLevel] = 0;
       if (whichToIncr > 0) {
         whichToIncr--;
@@ -149,9 +212,6 @@ public void recurseDown(int currentLevel) {
         } else {
           nextPath = firstPath;
         }
-        //      } else {
-        //        whichToIncr = 0;
-        //        nextPath = prevPaths[0];
       }
 
       decrementing = true;
@@ -220,6 +280,14 @@ public Edge getEdgeOf(boolean relTrue, String pathRel, String startOrEnd, String
       if (prevPaths[i].equals(finalPath) || finalPath.equals(firstPath)) {
         omit = true;
       }
+    }
+
+    if (!finalPath.contains("/c/en/")) {
+      omit = true;
+    }
+
+    if (finalPath.contains("/v/") || finalPath.contains("/r/") || finalPath.contains("/a")) {
+      omit = true;
     }
 
     thisEdge = new Edge(startLemmas, endLemmas, start, end, rel, finalName, finalPath, level, omit);
