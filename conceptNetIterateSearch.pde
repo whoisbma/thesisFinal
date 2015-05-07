@@ -4,13 +4,17 @@
 
 //several potential problems:
 //1 - my logic on null and omit skips has an issue, especially if its in the "currentLevel" slot and not just skipping on its way towards it. probably a problem, yes.
+//^^^maybe fixed?
 //2 - it does an extra path search more than necessary during a normal "pull back".
 //3 - in the last stage it resets all to zero while pulling back, apparently. not necessary to happen.
+//^^not sure about this
+//4 - this stuff is still all too huge. need to cull more. or cull random sections? or have a small edgeLimit but always add a random number to the offset?
+//5 - possibly download the conceptnet locally. no http requests means potentially much much faster.
+//6 - there is definitely a bug that causes a loop sometimes. i suspect an omit or null near the first level and its repeat point
 
 
-
-final int edgeLimit = 5;
-final int levelLimit = 5;
+final int edgeLimit = 10;
+final int levelLimit = 4;
 
 final String path = "http://conceptnet5.media.mit.edu/data/5.2";
 
@@ -27,6 +31,7 @@ int whichToIncr = 0; // for testing above
 boolean decrementing = false; 
 
 int totalPaths = 0;
+int totalSuccesses = 0;
 int totalRecurses = 0;
 int totalOmits = 0;
 int totalNulls = 0;
@@ -36,12 +41,16 @@ String nextPath = firstPath;
 
 String[] prevPaths = new String[levelLimit]; 
 
+ArrayList<String[]> successPaths;
+
 boolean done = false;
 
 void setup() {
-  size(400, 400);
+  size(100, 100);
   background(250);
-  frameRate(2);
+  //frameRate(2);
+
+  successPaths = new ArrayList<String[]>();
 
   for (int i = 0; i < levelLimit; i++) {
     offsetArray[i] = 0;
@@ -60,10 +69,21 @@ public void recurseDown(int currentLevel) {
   totalRecurses++;
   if (currentLevel < 0) {
     println("done");
+    println("total successes: " + totalSuccesses);
     println("total paths: " + totalPaths);
     println("total recurses: " + totalRecurses);
     println("total omits: " + totalOmits);
     println("total nulls: " + totalNulls);
+
+    for (int i = 0; i < successPaths.size (); i++) {
+      String[] thisPath = successPaths.get(i);
+      println();
+      print("c/en/person -> ");
+      for (int j = 0; j < thisPath.length; j++) {
+        print(thisPath[j] + " -> ");
+      }
+      println();
+    }
     done = true; 
     return;
   }
@@ -130,6 +150,10 @@ public void recurseDown(int currentLevel) {
       println("whichToIncr == levelLimit, recursing and decrementing");
       decrementing = true;
       recurseDown(currentLevel);
+    } else if (whichToIncr == 0) {
+      //!!!!!
+      ///NEED A FIX HERE, AND BELOW
+      //!!!!!
     } else {
       decrementing = true;
       recurseDown(whichToIncr);
@@ -163,6 +187,10 @@ public void recurseDown(int currentLevel) {
         println("whichToIncr == levelLimit, recursing and decrementing");
         decrementing = true;
         recurseDown(currentLevel);
+      } else if (whichToIncr == 0) {
+        //!!!!!
+        ///NEED A FIX HERE, AND ABOVE
+        //!!!!!
       } else {
         decrementing = true;
         recurseDown(whichToIncr);
@@ -175,6 +203,25 @@ public void recurseDown(int currentLevel) {
   } else {
     println("found: " + newEdge.finalPath);
     prevPaths[whichToIncr] = newEdge.finalPath;
+    for (int i = 0; i < prevPaths.length-1; i++) {
+      if (prevPaths[i].contains("money") && prevPaths[i+1].equals("")) {
+        String[] successPath = new String[i+1];
+        for (int j = 0; j < successPath.length; j++) {
+          successPath[j] = prevPaths[j];
+        }
+        successPaths.add(successPath);
+        totalSuccesses++;
+      }
+    }
+    if (prevPaths[prevPaths.length-1].contains("money")) {
+      String[] successPath = new String[prevPaths.length];
+      for (int j = 0; j < successPath.length; j++) {
+        successPath[j] = prevPaths[j];
+      }
+      successPaths.add(successPath);
+      totalSuccesses++;
+    }
+    //successPaths.add(prevPaths.clone());
     totalPaths++;
 
     print("current chain: " + firstPath + " --> ");
