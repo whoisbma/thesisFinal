@@ -10,11 +10,9 @@
 //^^not sure about this
 //4 - this stuff is still all too huge. need to cull more. or cull random sections? or have a small edgeLimit but always add a random number to the offset?
 //5 - possibly download the conceptnet locally. no http requests means potentially much much faster.
-//6 - there is definitely a bug that causes a loop sometimes. i suspect an omit or null near the first level and its repeat point
-
-
-final int edgeLimit = 10;
-final int levelLimit = 4;
+//6 - there is definitely a bug that causes a loop sometimes. i suspect an omit or null near the first level and its repeat point (EDIT - not the first level, maybe any level on a pullback)
+final int edgeLimit = 20;
+final int levelLimit = 3;
 
 final String path = "http://conceptnet5.media.mit.edu/data/5.2";
 
@@ -44,11 +42,12 @@ String[] prevPaths = new String[levelLimit];
 ArrayList<String[]> successPaths;
 
 boolean done = false;
+boolean exception = false;
 
 void setup() {
   size(100, 100);
   background(250);
-  //frameRate(2);
+  //frameRate(0.5);
 
   successPaths = new ArrayList<String[]>();
 
@@ -67,6 +66,10 @@ void draw() {
 
 public void recurseDown(int currentLevel) {
   totalRecurses++;
+  
+  //----------------------------------------------------------------------
+  //finish conditions and actions-----------------------------------------
+  //----------------------------------------------------------------------
   if (currentLevel < 0) {
     println("done");
     println("total successes: " + totalSuccesses);
@@ -132,33 +135,93 @@ public void recurseDown(int currentLevel) {
   //----------------------------------------------------------------------
   //if new edge is null,--------------------------------------------------
   //----------------------------------------------------------------------
-  if (newEdge == null) {
+  if (newEdge == null && exception == false) {
     totalNulls++;
     println("found: NULL!!");
     println();
-    offsetArray[whichToIncr] = 0;
-    if (whichToIncr > 0) {
-      whichToIncr--;
+    
+    
+    if (offsetArray[whichToIncr] < (edgeLimit - 1)) { 
+      println("current position is below edge limit, increment.");
+      println();
+      offsetArray[whichToIncr]++;  //increment offset at current level position
+      //nextPath doesn't change, uses current one, just changes offset
+    } else {
+      println("current position is at edge limit, set it to 0 and decrease whichToIncr");
+      
+      offsetArray[whichToIncr] = 0;
       if (whichToIncr > 0) {
-        nextPath = prevPaths[whichToIncr-1];
+        whichToIncr--;
+        if (whichToIncr > 0) {
+          nextPath = prevPaths[whichToIncr-1];
+        } else {
+          nextPath = firstPath;
+        }
+      }
+      if (whichToIncr == levelLimit - 1) {
+        println("whichToIncr == levelLimit, recursing and decrementing");
+        println();
+        decrementing = true;
+        recurseDown(currentLevel);
+//      } else if (whichToIncr == 0) {
+//        println("uh oh");
+//        println();
+        //!!!!!
+        ///NEED A FIX HERE, AND ABOVE
+        //!!!!!
       } else {
-        nextPath = firstPath;
+        println("recursing on whichToIncr");
+        println();
+        decrementing = true;
+        recurseDown(whichToIncr);
+      }
+      
+    }    
+    
+    //REPLACING FORMER NULL OMISSION WITH THE OMIT LOGIC
+    //MORE REDUNDANCY WITH ACTUAL NULLS, BUT BETTER FIX FOR INTENET PROBLEMS??
+    /*offsetArray[whichToIncr] = 0;
+    
+    //--------------------------------------------------------------------
+    //if this edge is not the first level---------------------------------
+    if (whichToIncr > 0) {
+      whichToIncr--;                          //decrement the edge level to check
+      if (whichToIncr > 0) {                  //if it is still higher than the first level
+        nextPath = prevPaths[whichToIncr-1];  //make the next path to check the level before the edge level
+      } else {                                //else if its the first level, that means the root search is the original
+        nextPath = firstPath;                 //set the next path to search to the original path.
       }
     }
-
-    if (whichToIncr == levelLimit) {
+    //--------------------------------------------------------------------
+    //else if this edge is the LAST level---------------------------------
+    if (whichToIncr == levelLimit) {!!!!! (JUST ADDED THE "-1", add below?)     //possibly compare whichToIncr against currentLevel instead? trying below
+    //if (whichToIncr == currentLevel) {
       println("whichToIncr == levelLimit, recursing and decrementing");
-      decrementing = true;
-      recurseDown(currentLevel);
+      decrementing = true;          //need to decrement using currentLevel, not whichToIncr
+      recurseDown(currentLevel);  
     } else if (whichToIncr == 0) {
+      println("uh oh");
       //!!!!!
       ///NEED A FIX HERE, AND BELOW
       //!!!!!
     } else {
+      println("recursing on whichToIncr");
       decrementing = true;
       recurseDown(whichToIncr);
-    }
-
+    }*/
+    
+    //this maybe still needs the 'step-forward' check - not everything will be null because of no results, some will be null because of internet problems.
+  
+  
+  } else if (newEdge == null && exception == true) {
+    println("returning, exception registered");
+    exception = false;
+    delay(5000);
+    return;
+  
+  
+  
+  
     //----------------------------------------------------------------------
     //if new edge is to be omitted,-----------------------------------------
     //----------------------------------------------------------------------
@@ -172,8 +235,8 @@ public void recurseDown(int currentLevel) {
       offsetArray[whichToIncr]++;  //increment offset at current level position
       //nextPath doesn't change, uses current one, just changes offset
     } else {
-      println("current position is at edge limit, set it to 0 and decrease which to increment");
-      println();
+      println("current position is at edge limit, set it to 0 and decrease whichToIncr");
+      
       offsetArray[whichToIncr] = 0;
       if (whichToIncr > 0) {
         whichToIncr--;
@@ -183,18 +246,24 @@ public void recurseDown(int currentLevel) {
           nextPath = firstPath;
         }
       }
-      if (whichToIncr == levelLimit) {
+      if (whichToIncr == levelLimit - 1) {
         println("whichToIncr == levelLimit, recursing and decrementing");
+        println();
         decrementing = true;
         recurseDown(currentLevel);
-      } else if (whichToIncr == 0) {
+//      } else if (whichToIncr == 0) {
+//        println("uh oh");
+//        println();
         //!!!!!
         ///NEED A FIX HERE, AND ABOVE
         //!!!!!
       } else {
+        println("recursing on whichToIncr");
+        println();
         decrementing = true;
         recurseDown(whichToIncr);
       }
+      
     }
 
     //----------------------------------------------------------------------
@@ -274,6 +343,7 @@ public Edge getEdgeOf(boolean relTrue, String pathRel, String startOrEnd, String
   } 
   catch (NullPointerException e) {
     e.printStackTrace();
+    exception = true;
     return null;
   } 
 
