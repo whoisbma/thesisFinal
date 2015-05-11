@@ -1,0 +1,45 @@
+2
+13
+/c/en/person
+/c/en/invite_them
+false
+3
+1
+1
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+/c/en/talk_to_each_other
+/c/en/have_friend_over
+/c/en/invite_them
+/c/en/proper_digestion
+/c/en/spit
+/c/en/write
+/c/en/be_creative
+/c/en/find_truth
+/c/en/student
+/c/en/encyclopedia
+/c/en/lot_of_knowledge
+/c/en/take_walk
+/c/en/listen_to_music
+talk to each other
+have friend over
+invite them
+proper digestion
+spit
+write
+be creative
+find truth
+student
+encyclopedia
+lot of knowledge
+take walk
+listen to music

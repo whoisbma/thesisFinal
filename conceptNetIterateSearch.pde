@@ -3,16 +3,22 @@
 // when reach limit, go one level down further
 
 //several potential problems:
-//1 - my logic on null and omit skips has an issue, especially if its in the "currentLevel" slot and not just skipping on its way towards it. probably a problem, yes.
-//^^^maybe fixed?
-//2 - it does an extra path search more than necessary during a normal "pull back".
-//3 - in the last stage it resets all to zero while pulling back, apparently. not necessary to happen.
-//^^not sure about this
+// OK -  1 - my logic on null and omit skips has an issue, especially if its in the "currentLevel" slot and not just skipping on its way towards it. probably a problem, yes.
+// meh - 2 - it does an extra path search more than necessary during a normal "pull back".
+// meh - 3 - in the last stage it resets all to zero while pulling back, apparently. not necessary to happen.
 //4 - this stuff is still all too huge. need to cull more. or cull random sections? or have a small edgeLimit but always add a random number to the offset?
 //5 - possibly download the conceptnet locally. no http requests means potentially much much faster.
-//6 - there is definitely a bug that causes a loop sometimes. i suspect an omit or null near the first level and its repeat point (EDIT - not the first level, maybe any level on a pullback)
-final int edgeLimit = 20;
-final int levelLimit = 3;
+// OK  - 6 - there is definitely a bug that causes a loop sometimes. i suspect an omit or null near the first level and its repeat point (EDIT - not the first level, maybe any level on a pullback)
+//7 - try random offset on smaller number of edges. 
+//8 - try the IsA relation search as a starting point. 
+//9 - save current state to disk and load on run (including decrementing boolean) - then use that to pre-generate a ton.
+//10 - try increasing edgelimit per level of recursion. (edgeLimit array {1,1,1,1,2,3,4,5} etc. (and combine with the random offset - large for first edges, smaller for later))
+//11 - i GUESS try to cull all previously checked nodes again? just to check?
+//12 - can also cull completely arbitrary nodes at various levels of recursion. 
+
+
+final int edgeLimit = 2;
+final int levelLimit = 13;
 
 final String path = "http://conceptnet5.media.mit.edu/data/5.2";
 
@@ -38,35 +44,68 @@ String firstPath = "/c/en/person";
 String nextPath = firstPath;
 
 String[] prevPaths = new String[levelLimit]; 
+String[] prevNames = new String[levelLimit];
 
-ArrayList<String[]> successPaths;
+//ArrayList<String[]> successPaths;
+ArrayList<String[]> successNames;
 
 boolean done = false;
 boolean exception = false;
+
+String[] loggedSuccesses;
 
 void setup() {
   size(100, 100);
   background(250);
   //frameRate(0.5);
+  prepareExitHandler();
+  //successPaths = new ArrayList<String[]>();
+  successNames = new ArrayList<String[]>();
 
-  successPaths = new ArrayList<String[]>();
+  loggedSuccesses = loadStrings("successes.txt");
 
   for (int i = 0; i < levelLimit; i++) {
     offsetArray[i] = 0;
     offsetChar[i] = 'O';
     prevPaths[i] = "";
+    prevNames[i] = "";
   }
 }
 
 void draw() {
   if (done == false) {
     recurseDown(levelLimit-1);
+  } else {
+    saveStatus();
+    println("delaying");
+    delay(5000);
+    loggedSuccesses = loadStrings("successes.txt");
+    done = false;
   }
 }
 
+
+// must add "prepareExitHandler();" in setup() for Processing sketches 
+private void prepareExitHandler() {
+  Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+    public void run () {
+      //System.out.println("SHUTDOWN HOOK");
+      saveStatus();
+      try {
+        stop();
+      } 
+      catch (Exception ex) {
+        ex.printStackTrace(); // not much else to do at this point
+      }
+    }
+  }
+  ));
+}  
+
+
 public void recurseDown(int currentLevel) {
   totalRecurses++;
-  
+
   //----------------------------------------------------------------------
   //finish conditions and actions-----------------------------------------
   //----------------------------------------------------------------------
@@ -78,15 +117,26 @@ public void recurseDown(int currentLevel) {
     println("total omits: " + totalOmits);
     println("total nulls: " + totalNulls);
 
-    for (int i = 0; i < successPaths.size (); i++) {
-      String[] thisPath = successPaths.get(i);
+    //    for (int i = 0; i < successPaths.size (); i++) {
+    //      String[] thisPath = successPaths.get(i);
+    //      println();
+    //      print("c/en/person -> ");
+    //      for (int j = 0; j < thisPath.length; j++) {
+    //        print(thisPath[j] + " -> ");
+    //      }
+    //      println();
+    //    }
+
+    for (int i = 0; i < successNames.size (); i++) {
+      String[] thisName = successNames.get(i);
       println();
       print("c/en/person -> ");
-      for (int j = 0; j < thisPath.length; j++) {
-        print(thisPath[j] + " -> ");
+      for (int j = 0; j < thisName.length; j++) {
+        print(thisName[j] + " -> ");
       }
       println();
     }
+
     done = true; 
     return;
   }
@@ -120,17 +170,17 @@ public void recurseDown(int currentLevel) {
   }
   println();
 
-  print("search chain: " + firstPath + " --> ");
-  for (int i = 0; i < whichToIncr; i++) {
-    print(prevPaths[i] + " - ");
-  }
-  println();
+  //  print("search chain: " + firstPath + " --> ");
+  //  for (int i = 0; i < whichToIncr; i++) {
+  //    print(prevPaths[i] + " - ");
+  //  }
+  //  println();
 
   //----------------------------------------------------------------------
   //searching next path---------------------------------------------------
   //----------------------------------------------------------------------
   print("searching: " + nextPath + ", ");
-  Edge newEdge = getEdgeOf(false, "", "", nextPath, offsetArray[whichToIncr], 1);
+  Edge newEdge = getEdgeOf(false, "", "", nextPath, offsetArray[whichToIncr] + (int)random(20), 1);
 
   //----------------------------------------------------------------------
   //if new edge is null,--------------------------------------------------
@@ -139,89 +189,44 @@ public void recurseDown(int currentLevel) {
     totalNulls++;
     println("found: NULL!!");
     println();
-    
-    
-    if (offsetArray[whichToIncr] < (edgeLimit - 1)) { 
-      println("current position is below edge limit, increment.");
-      println();
-      offsetArray[whichToIncr]++;  //increment offset at current level position
-      //nextPath doesn't change, uses current one, just changes offset
-    } else {
-      println("current position is at edge limit, set it to 0 and decrease whichToIncr");
-      
-      offsetArray[whichToIncr] = 0;
-      if (whichToIncr > 0) {
-        whichToIncr--;
-        if (whichToIncr > 0) {
-          nextPath = prevPaths[whichToIncr-1];
-        } else {
-          nextPath = firstPath;
-        }
-      }
-      if (whichToIncr == levelLimit - 1) {
-        println("whichToIncr == levelLimit, recursing and decrementing");
-        println();
-        decrementing = true;
-        recurseDown(currentLevel);
-//      } else if (whichToIncr == 0) {
-//        println("uh oh");
-//        println();
-        //!!!!!
-        ///NEED A FIX HERE, AND ABOVE
-        //!!!!!
-      } else {
-        println("recursing on whichToIncr");
-        println();
-        decrementing = true;
-        recurseDown(whichToIncr);
-      }
-      
-    }    
-    
-    //REPLACING FORMER NULL OMISSION WITH THE OMIT LOGIC
-    //MORE REDUNDANCY WITH ACTUAL NULLS, BUT BETTER FIX FOR INTENET PROBLEMS??
-    /*offsetArray[whichToIncr] = 0;
-    
-    //--------------------------------------------------------------------
-    //if this edge is not the first level---------------------------------
+    //    if (offsetArray[whichToIncr] < (edgeLimit - 1)) { 
+    //      println("current position is below edge limit, increment.");
+    //      println();
+    //      offsetArray[whichToIncr]++;  //increment offset at current level position
+    //      //nextPath doesn't change, uses current one, just changes offset
+    //    } else {
+    //      println("current position is at edge limit, set it to 0 and decrease whichToIncr");
+    //      
+    offsetArray[whichToIncr] = 0;
     if (whichToIncr > 0) {
-      whichToIncr--;                          //decrement the edge level to check
-      if (whichToIncr > 0) {                  //if it is still higher than the first level
-        nextPath = prevPaths[whichToIncr-1];  //make the next path to check the level before the edge level
-      } else {                                //else if its the first level, that means the root search is the original
-        nextPath = firstPath;                 //set the next path to search to the original path.
+      whichToIncr--;
+      if (whichToIncr > 0) {
+        nextPath = prevPaths[whichToIncr-1];
+      } else {
+        nextPath = firstPath;
       }
     }
-    //--------------------------------------------------------------------
-    //else if this edge is the LAST level---------------------------------
-    if (whichToIncr == levelLimit) {!!!!! (JUST ADDED THE "-1", add below?)     //possibly compare whichToIncr against currentLevel instead? trying below
-    //if (whichToIncr == currentLevel) {
+    if (whichToIncr == levelLimit - 1) {
       println("whichToIncr == levelLimit, recursing and decrementing");
-      decrementing = true;          //need to decrement using currentLevel, not whichToIncr
-      recurseDown(currentLevel);  
-    } else if (whichToIncr == 0) {
-      println("uh oh");
-      //!!!!!
-      ///NEED A FIX HERE, AND BELOW
-      //!!!!!
+      println();
+      decrementing = true;
+      recurseDown(currentLevel);
     } else {
       println("recursing on whichToIncr");
+      println();
       decrementing = true;
       recurseDown(whichToIncr);
-    }*/
-    
-    //this maybe still needs the 'step-forward' check - not everything will be null because of no results, some will be null because of internet problems.
-  
-  
+    }
+
+    //----------------------------------------------------------------------
+    //if i catch a HTTP rejection-------------------------------------------
+    //----------------------------------------------------------------------
   } else if (newEdge == null && exception == true) {
     println("returning, exception registered");
     exception = false;
     delay(5000);
     return;
-  
-  
-  
-  
+
     //----------------------------------------------------------------------
     //if new edge is to be omitted,-----------------------------------------
     //----------------------------------------------------------------------
@@ -236,7 +241,7 @@ public void recurseDown(int currentLevel) {
       //nextPath doesn't change, uses current one, just changes offset
     } else {
       println("current position is at edge limit, set it to 0 and decrease whichToIncr");
-      
+
       offsetArray[whichToIncr] = 0;
       if (whichToIncr > 0) {
         whichToIncr--;
@@ -251,9 +256,9 @@ public void recurseDown(int currentLevel) {
         println();
         decrementing = true;
         recurseDown(currentLevel);
-//      } else if (whichToIncr == 0) {
-//        println("uh oh");
-//        println();
+        //      } else if (whichToIncr == 0) {
+        //        println("uh oh");
+        //        println();
         //!!!!!
         ///NEED A FIX HERE, AND ABOVE
         //!!!!!
@@ -263,7 +268,6 @@ public void recurseDown(int currentLevel) {
         decrementing = true;
         recurseDown(whichToIncr);
       }
-      
     }
 
     //----------------------------------------------------------------------
@@ -272,22 +276,29 @@ public void recurseDown(int currentLevel) {
   } else {
     println("found: " + newEdge.finalPath);
     prevPaths[whichToIncr] = newEdge.finalPath;
+    prevNames[whichToIncr] = newEdge.finalName;
     for (int i = 0; i < prevPaths.length-1; i++) {
       if (prevPaths[i].contains("money") && prevPaths[i+1].equals("")) {
-        String[] successPath = new String[i+1];
-        for (int j = 0; j < successPath.length; j++) {
-          successPath[j] = prevPaths[j];
+        //String[] successPath = new String[i+1];
+        String[] successName = new String[i+1];
+        for (int j = 0; j < successName.length; j++) {
+          //successPath[j] = prevPaths[j];
+          successName[j] = prevNames[j];
         }
-        successPaths.add(successPath);
+        //successPaths.add(successPath);
+        successNames.add(successName);
         totalSuccesses++;
       }
     }
     if (prevPaths[prevPaths.length-1].contains("money")) {
-      String[] successPath = new String[prevPaths.length];
-      for (int j = 0; j < successPath.length; j++) {
-        successPath[j] = prevPaths[j];
+      //String[] successPath = new String[prevPaths.length];
+      String[] successName = new String[prevNames.length];
+      for (int j = 0; j < successName.length; j++) {
+        //successPath[j] = prevPaths[j];
+        successName[j] = prevNames[j];
       }
-      successPaths.add(successPath);
+      //successPaths.add(successPath);
+      successNames.add(successName);
       totalSuccesses++;
     }
     //successPaths.add(prevPaths.clone());
@@ -298,6 +309,14 @@ public void recurseDown(int currentLevel) {
       print(prevPaths[i] + " - ");
     }
     print(newEdge.finalPath);
+    println();
+
+
+    print("current name chain: " + firstPath + " --> ");
+    for (int i = 0; i < whichToIncr; i++) {
+      print(prevNames[i] + " - ");
+    }
+    print(newEdge.finalName);
     println();
     println();
 
@@ -407,6 +426,10 @@ public Edge getEdgeOf(boolean relTrue, String pathRel, String startOrEnd, String
       omit = true;
     }
 
+    if (finalPath.length() > 25) {//37) { //cull large concepts
+      omit = true;
+    }
+
     thisEdge = new Edge(startLemmas, endLemmas, start, end, rel, finalName, finalPath, level, omit);
     //    println("edge number " + i + ":" + "\n" +
     //        "\t" + "start = " + start + "\n" + 
@@ -445,4 +468,52 @@ public String getPath(String searchObject, boolean relTrue, String relString, St
   //println(newPath);
   return newPath;
 } 
+
+
+private void saveStatus() {
+  String decrementingString;
+  if (decrementing == true) {
+    decrementingString = "true";
+  } else {
+    decrementingString = "false";
+  }
+  String[] statusString = {
+    str(edgeLimit), 
+    str(levelLimit), 
+    firstPath, 
+    nextPath, 
+    decrementingString, 
+    str(whichToIncr), 
+    str(offsetArray[0]), str(offsetArray[1]), str(offsetArray[2]), str(offsetArray[3]), str(offsetArray[4]), 
+    str(offsetArray[5]), str(offsetArray[6]), str(offsetArray[7]), str(offsetArray[8]), str(offsetArray[9]), 
+    str(offsetArray[10]), str(offsetArray[11]), str(offsetArray[12]),
+
+    prevPaths[0], prevPaths[1], prevPaths[2], prevPaths[3], prevPaths[4], 
+    prevPaths[5], prevPaths[6], prevPaths[7], prevPaths[8], prevPaths[9], 
+    prevPaths[10], prevPaths[11], prevPaths[12],
+
+    prevNames[0], prevNames[1], prevNames[2], prevNames[3], prevNames[4], 
+    prevNames[5], prevNames[6], prevNames[7], prevNames[8], prevNames[9], 
+    prevNames[10], prevNames[11], prevNames[12]
+  };
+  saveStrings("status.txt", statusString);
+
+  String[] successNamesArray = new String[successNames.size() + loggedSuccesses.length];
+  for (int i = 0; i < loggedSuccesses.length; i++) {
+    successNamesArray[i] = loggedSuccesses[i];
+  }
+
+  for (int i = loggedSuccesses.length; i < loggedSuccesses.length + successNames.size(); i++) {
+    String[] success = successNames.get(i - loggedSuccesses.length);
+    String thisSuccess = "person,";
+    for (int j = 0; j < success.length; j++) {
+      thisSuccess += success[j] + ",";
+    }
+    if (!success[success.length-1].equals("money")) {
+      thisSuccess += "money";
+    }
+    successNamesArray[i] = thisSuccess;
+  }
+  saveStrings("successes.txt", successNamesArray);
+}
 
