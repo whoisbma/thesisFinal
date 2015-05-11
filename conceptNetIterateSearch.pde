@@ -57,7 +57,7 @@ String[] loggedSuccesses;
 void setup() {
   size(100, 100);
   background(250);
-  //frameRate(0.5);
+  //frameRate(1);
   prepareExitHandler();
   //successPaths = new ArrayList<String[]>();
   successNames = new ArrayList<String[]>();
@@ -74,12 +74,14 @@ void setup() {
 
 void draw() {
   if (done == false) {
+    if (frameCount % 100 == 0) {
+      saveStatus();
+    }
     recurseDown(levelLimit-1);
   } else {
     saveStatus();
     println("delaying");
     delay(5000);
-    loggedSuccesses = loadStrings("successes.txt");
     done = false;
   }
 }
@@ -224,7 +226,7 @@ public void recurseDown(int currentLevel) {
   } else if (newEdge == null && exception == true) {
     println("returning, exception registered");
     exception = false;
-    delay(5000);
+    delay(1000);
     return;
 
     //----------------------------------------------------------------------
@@ -278,7 +280,7 @@ public void recurseDown(int currentLevel) {
     prevPaths[whichToIncr] = newEdge.finalPath;
     prevNames[whichToIncr] = newEdge.finalName;
     for (int i = 0; i < prevPaths.length-1; i++) {
-      if (prevPaths[i].contains("money") && prevPaths[i+1].equals("")) {
+      //if (prevPaths[i].contains("money") && prevPaths[i+1].equals("")) {
         //String[] successPath = new String[i+1];
         String[] successName = new String[i+1];
         for (int j = 0; j < successName.length; j++) {
@@ -288,9 +290,9 @@ public void recurseDown(int currentLevel) {
         //successPaths.add(successPath);
         successNames.add(successName);
         totalSuccesses++;
-      }
+      //}
     }
-    if (prevPaths[prevPaths.length-1].contains("money")) {
+    //if (prevPaths[prevPaths.length-1].contains("money")) {
       //String[] successPath = new String[prevPaths.length];
       String[] successName = new String[prevNames.length];
       for (int j = 0; j < successName.length; j++) {
@@ -300,7 +302,7 @@ public void recurseDown(int currentLevel) {
       //successPaths.add(successPath);
       successNames.add(successName);
       totalSuccesses++;
-    }
+    //}
     //successPaths.add(prevPaths.clone());
     totalPaths++;
 
@@ -469,8 +471,8 @@ public String getPath(String searchObject, boolean relTrue, String relString, St
   return newPath;
 } 
 
-
 private void saveStatus() {
+  loggedSuccesses = loadStrings("successes.txt");
   String decrementingString;
   if (decrementing == true) {
     decrementingString = "true";
@@ -498,13 +500,10 @@ private void saveStatus() {
   };
   saveStrings("status.txt", statusString);
 
-  String[] successNamesArray = new String[successNames.size() + loggedSuccesses.length];
-  for (int i = 0; i < loggedSuccesses.length; i++) {
-    successNamesArray[i] = loggedSuccesses[i];
-  }
-
-  for (int i = loggedSuccesses.length; i < loggedSuccesses.length + successNames.size(); i++) {
-    String[] success = successNames.get(i - loggedSuccesses.length);
+  
+  String[] newSuccesses = new String[successNames.size()];
+  for (int i = 0; i < successNames.size(); i++) {
+    String[] success = successNames.get(i);
     String thisSuccess = "person,";
     for (int j = 0; j < success.length; j++) {
       thisSuccess += success[j] + ",";
@@ -512,8 +511,58 @@ private void saveStatus() {
     if (!success[success.length-1].equals("money")) {
       thisSuccess += "money";
     }
-    successNamesArray[i] = thisSuccess;
+    newSuccesses[i] = thisSuccess;
   }
-  saveStrings("successes.txt", successNamesArray);
+  
+  for (int i = 0; i < loggedSuccesses.length; i++) {
+    for (int j = 0; j < newSuccesses.length; j++) {
+      if (newSuccesses[j].equals(loggedSuccesses[i])) {
+        newSuccesses[j] = "OMIT";
+      }
+    }
+  }
+  
+  println("from array size " + newSuccesses.length);
+  
+  int newArraySize = newSuccesses.length;
+  for (int i = 0; i < newSuccesses.length; i++) {
+    if (newSuccesses[i].equals("OMIT")) {
+      newArraySize--;
+    }
+  }
+  
+  String[] newNewSuccesses = new String[newArraySize];
+  int index = 0;
+  for (int i = 0; i < newSuccesses.length; i++) {
+    if (!newSuccesses[i].equals("OMIT")) {
+      newNewSuccesses[index] = newSuccesses[i];
+      index++;
+    }
+  }
+  
+  String[] newNewNewSuccesses = concat(loggedSuccesses,newNewSuccesses);
+  
+  saveStrings("successes.txt", newNewNewSuccesses);
+  
+//  successNames.clear();
+
+//  String[] successNamesArray = new String[successNames.size() + loggedSuccesses.length];
+//  for (int i = 0; i < loggedSuccesses.length; i++) {
+//    successNamesArray[i] = loggedSuccesses[i];
+//  }
+
+
+//  for (int i = loggedSuccesses.length; i < loggedSuccesses.length + successNames.size(); i++) {
+//    String[] success = successNames.get(i - loggedSuccesses.length);
+//    String thisSuccess = "person,";
+//    for (int j = 0; j < success.length; j++) {
+//      thisSuccess += success[j] + ",";
+//    }
+//    if (!success[success.length-1].equals("money")) {
+//      thisSuccess += "money";
+//    }
+//    successNamesArray[i] = thisSuccess;
+//  }
+ // saveStrings("successes.txt", successNamesArray);
 }
 

@@ -1,13 +1,8 @@
 2
 13
 /c/en/person
-/c/en/invite_them
-false
-3
-1
-1
-0
-1
+/c/en/person
+true
 0
 0
 0
@@ -17,29 +12,34 @@ false
 0
 0
 0
-/c/en/talk_to_each_other
-/c/en/have_friend_over
-/c/en/invite_them
-/c/en/proper_digestion
-/c/en/spit
-/c/en/write
-/c/en/be_creative
-/c/en/find_truth
-/c/en/student
-/c/en/encyclopedia
-/c/en/lot_of_knowledge
-/c/en/take_walk
-/c/en/listen_to_music
-talk to each other
-have friend over
-invite them
-proper digestion
-spit
-write
-be creative
-find truth
-student
-encyclopedia
-lot of knowledge
-take walk
-listen to music
+0
+0
+0
+0
+0
+/c/en/voice_opinion
+/c/en/sloppiness
+/c/en/literature
+/c/en/read_book
+/c/en/turn_on_light
+/c/en/sail
+/c/en/get_pay
+/c/en/switch_it_on
+/c/en/sport_ball
+/c/en/play_game_of_chess
+/c/en/win_money
+/c/en/buy_something
+/c/en/go_to_clothe_store
+voice opinion
+sloppiness
+literature
+read book
+turn on light
+sail
+get pay
+switch it on
+sport ball
+play game of chess
+win money
+buy something
+go to clothe store
