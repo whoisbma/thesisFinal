@@ -10,36 +10,36 @@ true
 0
 0
 0
+1
+0
+0
+1
 0
 0
 0
-0
-0
-0
-0
-/c/en/voice_opinion
-/c/en/sloppiness
-/c/en/literature
-/c/en/read_book
-/c/en/turn_on_light
-/c/en/sail
-/c/en/get_pay
-/c/en/switch_it_on
-/c/en/sport_ball
-/c/en/play_game_of_chess
-/c/en/win_money
-/c/en/buy_something
-/c/en/go_to_clothe_store
-voice opinion
-sloppiness
-literature
-read book
-turn on light
-sail
-get pay
-switch it on
-sport ball
-play game of chess
-win money
-buy something
-go to clothe store
+/c/en/die
+/c/en/wood
+/c/en/wing
+/c/en/chick_light
+/c/en/bat
+/c/en/stick
+/c/en/play_hockey
+/c/en/sahara
+/c/en/saharan
+/c/en/home
+/c/en/potato
+/c/en/cook
+/c/en/steak
+die
+wood
+wing
+chick light
+bat
+stick
+play hockey
+sahara
+saharan
+home
+potato
+cook
+steak
