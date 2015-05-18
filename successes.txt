@@ -3378,3 +3378,25 @@ person,love,woman,baby,child,play,learn,student,study,enlightenment,go see play,
 person,love,woman,baby,child,play,learn,student,study,enlightenment,go see play,buy ticket,travel,some money,money
 person,love,woman,baby,child,play,learn,student,study,enlightenment,go see play,buy ticket,go to baseball game,some money,money
 person,child,think,work,earn money,money
+person,clothe,in bedroom,clock,time,not money,money
+person,strange,street,bike,exercise,play basketball,make money,work,get pay,you get money,money
+person,strange,street,bike,exercise,play basketball,make money,work,eat,you get money,money
+person,strange,street,bike,exercise,play basketball,make money,work,think,you get money,money
+person,strange,street,bike,exercise,play basketball,stop play with ball,work,think,you get money,money
+person,strange,street,bike,exercise,play basketball,stop play with ball,work,think,you get money,money
+person,strange,street,leave,exercise,play basketball,stop play with ball,work,think,you get money,money
+person,strange,street,sign,exercise,play basketball,stop play with ball,work,think,you get money,money
+person,strange,street,sign,inform others,play basketball,stop play with ball,work,think,you get money,money
+person,strange,street,lane,inform others,play basketball,stop play with ball,work,think,you get money,money
+person,orgasm,street,lane,inform others,play basketball,stop play with ball,work,think,you get money,money
+person,run,street,lane,inform others,play basketball,stop play with ball,work,think,you get money,money
+person,sleep at night,street,lane,inform others,play basketball,stop play with ball,work,think,you get money,money
+person,sleep at night,feel awake,lane,inform others,play basketball,stop play with ball,work,think,you get money,money
+person,sleep at night,wake up,lane,inform others,play basketball,stop play with ball,work,think,you get money,money
+person,break arm,wake up,lane,inform others,play basketball,stop play with ball,work,think,you get money,money
+person,fear death,wake up,lane,inform others,play basketball,stop play with ball,work,think,you get money,money
+person,die,wake up,lane,inform others,play basketball,stop play with ball,work,think,you get money,money
+person,privacy,view film at home,save money,money
+person,run,exercise,play hockey,break bone,play football,money,
+person,run,exercise,play hockey,break bone,play football,money,bank,money place,money
+person,run,exercise,play hockey,break bone,play football,money,buy hamburger,earn money,money

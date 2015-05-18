@@ -11,10 +11,19 @@
 //11 - i GUESS try to cull all previously checked nodes again? just to check?
 // not necessary with small randomer seachers.  12 - can also cull completely arbitrary nodes at various levels of recursion. 
 
-// clean out any paths that have "money" in the middle of them
+// clean out any paths that have "money" in the middle of them/
+// i might have some buggy paths.
 
+import ddf.minim.*;
+import ddf.minim.ugens.*;
 
 import processing.serial.*;
+
+Minim minim;
+AudioOutput out;
+Oscil wave;
+
+float soundFreq = 1000;
 
 Serial port;
 int stepper = 0;
@@ -24,7 +33,7 @@ int mode = -1;
 boolean active = true;
 boolean cleared = false;
 
-int refreshSpeed = 10;
+int refreshSpeed = 1;
 
 
 final int edgeLimit = 2;
@@ -93,6 +102,11 @@ void setup() {
   textAlign(LEFT, CENTER);
 
   displayedSuccessArray = changeDisplaySuccess();
+
+  minim = new Minim(this);
+  out = minim.getLineOut();
+  wave = new Oscil(440, 0.0, Waves.SINE);
+  wave.patch(out);
 }
 
 public void serialEvent(Serial myPort) {
@@ -103,6 +117,10 @@ public void serialEvent(Serial myPort) {
 public void clearAllLCDs() {
   port.write('>');
   stepper = 0;
+  if (wave != null) {
+    wave.setAmplitude(0.0);
+  }
+  soundFreq = random(2000);
   delay(2000);
 } 
 
@@ -132,11 +150,19 @@ void draw() {
 
       if (frameCount % refreshSpeed == 0) {
         println(stepper);
+        if (!displayedSuccessArray[stepper].equals("")) {
+          wave.setAmplitude(0.05);
+          wave.setFrequency(random(soundFreq, soundFreq+500)+stepper*random(1,5));
+        }
         sendData(displayedSuccessArray[stepper]);
+      } else {
+        wave.setAmplitude(0.0);
       }
     }
 
     if (stepper > displayedSuccessArray.length - 1) {
+      delay(500);
+      wave.setAmplitude(0.0);
       delay(5000);
       displayedSuccessArray = changeDisplaySuccess();
       refreshSpeed = (int)random(10)+1;
@@ -145,7 +171,7 @@ void draw() {
     }
   } else if (mode == -1) {
     for (int i = 0; i < (int)random(32); i++) {
-      port.write(char(-1)); 
+      port.write(char(-1));
     }
     port.write('\r');
     delay(10);

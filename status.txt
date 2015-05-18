@@ -7,39 +7,39 @@ true
 0
 0
 0
-1
 0
 0
 0
 0
-1
+0
 0
 1
 1
+0
 1
-/c/en/pay_bill
-/c/en/strangely
-/c/en/learn
-/c/en/desk
-/c/en/warm_you_food
-/c/en/pant_closure
-/c/en/wave
-/c/en/world_wide_problem
-/c/en/stockport_iowa
-/c/en/big
+/c/en/cross_street
+/c/en/pain
+/c/en/life
+/c/en/earn_money
+/c/en/serve_justice
+/c/en/bench
+/c/en/contemplate
+/c/en/epileptic_fit
 
 
 
-pay bill
-strangely
-learn
-desk
-warm you food
-pant closure
-wave
-world wide problem
-stockport iowa
-big
+
+
+cross street
+pain
+life
+earn money
+serve justice
+bench
+contemplate
+epileptic fit
+
+
 
 
 
