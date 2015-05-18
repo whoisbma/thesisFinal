@@ -1,0 +1,1 @@
+![definitions](http://mfadt.parsons.edu/2015/wp-content/uploads/projects/164_img_03.jpg)
