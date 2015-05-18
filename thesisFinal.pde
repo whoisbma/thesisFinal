@@ -19,6 +19,7 @@ import processing.serial.*;
 Serial port;
 int stepper = 0;
 //String textToSend = "";
+int mode = -1;
 
 boolean active = true;
 boolean cleared = false;
@@ -90,7 +91,7 @@ void setup() {
     prevNames[i] = "";
   }
   textAlign(LEFT, CENTER);
-  
+
   displayedSuccessArray = changeDisplaySuccess();
 }
 
@@ -121,23 +122,39 @@ public void sendData(String textToSend) {
 void draw() {
   background(250);
   fill(0);
-  if (displayedSuccessArray != null) {
-    for (int i = 0; i < displayedSuccessArray.length; i++) {
-      text(displayedSuccessArray[i], 15, 60 + i*20);
+
+  if (mode == 1) {
+
+    if (displayedSuccessArray != null) {
+      for (int i = 0; i < displayedSuccessArray.length; i++) {
+        text(displayedSuccessArray[i], 15, 60 + i*20);
+      }
+
+      if (frameCount % refreshSpeed == 0) {
+        println(stepper);
+        sendData(displayedSuccessArray[stepper]);
+      }
     }
 
-    if (frameCount % refreshSpeed == 0) {
-      println("hey here's a new success for you");
-      println(stepper);
-      sendData(displayedSuccessArray[stepper]);
+    if (stepper > displayedSuccessArray.length - 1) {
+      delay(5000);
+      displayedSuccessArray = changeDisplaySuccess();
+      refreshSpeed = (int)random(10)+1;
+      clearAllLCDs();
+      mode = -mode;
     }
-  }
-
-  if (stepper > displayedSuccessArray.length - 1) {
-    delay(5000);
-    displayedSuccessArray = changeDisplaySuccess();
-    refreshSpeed = (int)random(10)+1;
-    clearAllLCDs();
+  } else if (mode == -1) {
+    for (int i = 0; i < (int)random(32); i++) {
+      port.write(char(-1)); 
+    }
+    port.write('\r');
+    delay(10);
+    stepper++;
+    if (stepper > 15) {
+      delay(1000);
+      clearAllLCDs();
+      mode = -mode;
+    }
   }
 
 

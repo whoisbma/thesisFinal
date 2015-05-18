@@ -3377,3 +3377,4 @@ person,water plant,child,innocent,cow,bone,duck,eat,plate,meal,meat,store,bank,m
 person,love,woman,baby,child,play,learn,student,study,enlightenment,go see play,buy ticket,go to movie,some money,money
 person,love,woman,baby,child,play,learn,student,study,enlightenment,go see play,buy ticket,travel,some money,money
 person,love,woman,baby,child,play,learn,student,study,enlightenment,go see play,buy ticket,go to baseball game,some money,money
+person,child,think,work,earn money,money
