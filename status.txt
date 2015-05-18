@@ -15,31 +15,31 @@ true
 0
 1
 1
-0
 1
-/c/en/cross_street
-/c/en/pain
-/c/en/life
-/c/en/earn_money
-/c/en/serve_justice
-/c/en/bench
-/c/en/contemplate
-/c/en/epileptic_fit
+1
+/c/en/name
+/c/en/separate_shower
+/c/en/stressfactors
+/c/en/get_bore_easily
+/c/en/10_on_broadway
+/c/en/guitar
+/c/en/musical_work
+/c/en/100_break_window
+/c/en/exercise
+/c/en/meet_person_at_gym
+/c/en/watch_your_step
+/c/en/lead_horse
 
-
-
-
-
-cross street
-pain
-life
-earn money
-serve justice
-bench
-contemplate
-epileptic fit
-
-
-
-
+name
+separate shower
+stressfactors
+get bore easily
+10 on broadway
+guitar
+musical work
+100 break window
+exercise
+meet person at gym
+watch your step
+lead horse
 

@@ -35,7 +35,6 @@ boolean cleared = false;
 
 int refreshSpeed = 1;
 
-
 final int edgeLimit = 2;
 final int levelLimit = 13;
 final int howManyEdges = 100;
@@ -120,7 +119,7 @@ public void clearAllLCDs() {
   if (wave != null) {
     wave.setAmplitude(0.0);
   }
-  soundFreq = random(2000);
+  soundFreq = random(1000);
   delay(2000);
 } 
 
