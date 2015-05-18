@@ -868,27 +868,14 @@ person,fly,skyscraper,build,office,pen,school,city,cafe,meet person,go to party,
 person,fly,skyscraper,build,office,pen,school,city,cafe,meet person,go to party,get drunk,forget something,bring some money,money
 person,fly,skyscraper,build,office,pen,school,city,cafe,meet person,go to party,get drunk,drink alcohol,bring some money,money
 person,fly,skyscraper,build,office,pen,school,city,cafe,meet person,go to party,get drunk,go to pub,bring some money,money
-person,fly,skyscraper,build,office,pen,school,city,cafe,meet person,go to party,get drunk,fall down,bring some money,money
-person,fly,skyscraper,build,office,pen,school,city,cafe,meet person,go to party,get drunk,erection,bring some money,money
-person,fly,skyscraper,build,office,pen,school,city,cafe,meet person,go to party,get drunk,erection,bring some money,money
-person,fly,skyscraper,build,office,pen,school,city,cafe,meet person,go to party,invitation,erection,bring some money,money
-person,fly,skyscraper,build,office,pen,school,city,cafe,meet person,go to party,invitation,erection,bring some money,money
-person,fly,skyscraper,build,office,pen,school,city,cafe,meet person,net work,invitation,erection,bring some money,money
-person,fly,skyscraper,build,office,pen,school,city,cafe,meet person,you greet them,invitation,erection,bring some money,money
-person,fly,skyscraper,build,office,pen,school,city,cafe,eat and talk,you greet them,invitation,erection,bring some money,money
-person,fly,skyscraper,build,office,pen,school,city,cafe,tablecloth,you greet them,invitation,erection,bring some money,money
-person,fly,skyscraper,build,office,pen,school,city,cafe,tablecloth,fine restaurant,invitation,erection,bring some money,money
-person,fly,skyscraper,build,office,pen,school,city,cafe,tablecloth,social convention,invitation,erection,bring some money,money
-person,fly,skyscraper,build,office,pen,school,city,cafe,tablecloth,wash machine,invitation,erection,bring some money,money
-person,fly,skyscraper,build,office,pen,school,city,cafe,tablecloth,wash machine,pair of pant,erection,bring some money,money
 person,fly,skyscraper,build,office,pen,school,city,cafe,tablecloth,wash machine,pair of pant,in closet,bring some money,money
 person,fly,skyscraper,build,office,pen,school,city,cafe,tablecloth,wash machine,pair of pant,get dirty,bring some money,money
 person,fly,skyscraper,build,office,pen,school,city,cafe,tablecloth,wash machine,pair of pant,in closet,bring some money,money
 person,fly,skyscraper,build,office,pen,school,city,cafe,tablecloth,wash machine,machine,work,make money,money
-person,privacy,lock,door,couch,sit down,rest,exercise,stay fit,excersise,get in shape,look good,go to hairdresser,count your money,money
-person,privacy,lock,door,couch,sit down,rest,exercise,stay fit,excersise,get in shape,look good,go to hairdresser,money,
-person,privacy,lock,door,couch,sit down,rest,exercise,stay fit,excersise,get in shape,look good,go to get haircut,money,
-person,privacy,lock,door,couch,sit down,rest,exercise,stay fit,excersise,get in shape,look good,watch,money,
+person,privacy,lock,door,couch,sit down,rest,exercise,stay fit,exercise,get in shape,look good,go to hairdresser,count your money,money
+person,privacy,lock,door,couch,sit down,rest,exercise,stay fit,exercise,get in shape,look good,go to hairdresser,money,
+person,privacy,lock,door,couch,sit down,rest,exercise,stay fit,exercise,get in shape,look good,go to get haircut,money,
+person,privacy,lock,door,couch,sit down,rest,exercise,stay fit,exercise,get in shape,look good,watch,money,
 person,privacy,lock,door,couch,sit down,rest,sleep,close your eye,pray,relief,beer,casino,money,
 person,build,town,grocery store,steak,meat,often,gun,weapon,tank,war,expensive,child,save money,money
 person,sing,hear music,relax,spa,country club,place,farm,cow,grass,grind,dust,winery,money,
@@ -1170,7 +1157,7 @@ person,headache,wake up in morning,open your eye,take bath,get clean,bathe,get n
 person,headache,wake up in morning,open your eye,take bath,get clean,bathe,get naked,play poker,win money,profit,make money,sell your new book,you need money,money
 person,headache,wake up in morning,open your eye,take bath,get clean,bathe,get naked,play poker,win money,profit,make money,serve customer,you need money,money
 person,headache,wake up in morning,open your eye,take bath,get clean,bathe,get naked,play poker,win money,profit,make money,go public,you need money,money
-person,headache,wake up in morning,open your eye,take bath,get clean,bathe,get naked,play poker,win money,profit,make money,work,need money,money
+person,headache,wake up in morning,open your eye,take bath,get clean,bathe,get naked,play poker,win money,profit,make money,work,noteed money,money
 person,headache,wake up in morning,open your eye,take bath,get clean,bathe,get naked,play poker,win money,profit,make money,work,earn money,money
 person,break leg,skateboard,sport,fun,sex,great,world,small,star,sun,round,it,money,
 person,water plant,garden hose,garden,house,bathroom,clipper,barbershop,television show,shark,restaurant,bill,pocket,money,
@@ -3369,3 +3356,24 @@ person,headache,take final exam,panic,dress nice,go on date,look good,get job,mo
 person,headache,serve customer,their money,money
 person,sleep,rest,work,rent flat,have fun,play game,enjoyment,play baseball,baseball,sport,game,entertain person,make money,money
 person,catch cold,feel sick,drink too much,lose consciousness,go to sleep,dream,sleep,relax,have fun,play,win,lose,money,
+person,build,fall down,run out of steam,you get tire,run in marathon,exercise,play basketball,get dress,go to store,make list,grocery shop,have money,money
+person,build,fall down,run out of steam,you get tire,run in marathon,exercise,play basketball,get dress,go to store,make list,buy present,go to mall,spend money,money
+person,build,fall down,run out of steam,you get tire,run in marathon,exercise,play basketball,get dress,go to store,make list,buy present,get job,earn money,money
+person,build,fall down,run out of steam,you get tire,run in marathon,exercise,play basketball,get dress,go to store,make list,have party,pay bill,make money,money
+person,build,fall down,run out of steam,you get tire,run in marathon,exercise,play basketball,get dress,go to store,make list,have party,pay bill,earn money,money
+person,voice opinion,human,school,study,listen to music,go for jog,go outside,play frisbee,be outside,take walk,get out of house,go to film,get money,money
+person,cook dinner,cook food,bbq,band,piccolo,wind instrument,french horn,place,home,live,man,woman,spend money,money
+person,build,chair,furniture,find in house,bedroom,hooker,town,mouse,desktop,sunshine,grape,shop,have money,money
+person,catch cold,ride subway,it,comfortable,seat,find in car,window,door,house,home,place,bank,store your money,money
+person,make mistake,commit to memory,think,communicate,couple,theatre,mall,pen,write instrument,pencil,office,paper,money,
+person,make mistake,commit to memory,think,communicate,couple,theatre,mall,pen,write instrument,pencil,office,document folder,money,
+person,make mistake,commit to memory,think,communicate,couple,theatre,mall,pen,write instrument,pencil,office,coffee cup,money,
+person,make mistake,everyone,bone,duck,feather,pillow,hotel,lodge,hote,sleep,rest,go on vacation,save money,money
+person,make mistake,everyone,bone,duck,feather,pillow,hotel,lodge,hote,sleep,rest,stool,save money,money
+person,make mistake,everyone,bone,duck,feather,pillow,hotel,lodge,hote,sleep,rest,rejuvination,save money,money
+person,water plant,child,innocent,cow,bone,duck,eat,food,vegetable,bean,can,nickel,lot of money,money
+person,water plant,child,innocent,cow,bone,duck,eat,food,vegetable,bean,can,nickel,lot of money,money
+person,water plant,child,innocent,cow,bone,duck,eat,plate,meal,meat,store,bank,money,
+person,love,woman,baby,child,play,learn,student,study,enlightenment,go see play,buy ticket,go to movie,some money,money
+person,love,woman,baby,child,play,learn,student,study,enlightenment,go see play,buy ticket,travel,some money,money
+person,love,woman,baby,child,play,learn,student,study,enlightenment,go see play,buy ticket,go to baseball game,some money,money

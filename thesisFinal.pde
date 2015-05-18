@@ -11,6 +11,9 @@
 //11 - i GUESS try to cull all previously checked nodes again? just to check?
 // not necessary with small randomer seachers.  12 - can also cull completely arbitrary nodes at various levels of recursion. 
 
+// clean out any paths that have "money" in the middle of them
+
+
 import processing.serial.*;
 
 Serial port;
@@ -25,9 +28,10 @@ int refreshSpeed = 10;
 
 final int edgeLimit = 2;
 final int levelLimit = 13;
+final int howManyEdges = 100;
 
 final int[] edgeLimits = {
-  2, 2, 2, 2, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8
+  2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 4, 5
 };
 //final int[] edgeRandonOffset = {50,45,40,35,30,25,20,15,10,5,4,3,2,1};
 
@@ -254,7 +258,7 @@ public void recurseDown(int currentLevel) {
   //searching next path---------------------------------------------------
   //----------------------------------------------------------------------
   print("searching: " + nextPath + ", ");
-  Edge newEdge = getEdgeOf(false, "", "", nextPath, offsetArray[whichToIncr] + (int)random(50), 1);
+  Edge newEdge = getEdgeOf(false, "", "", nextPath, offsetArray[whichToIncr] + (int)random(howManyEdges), 1);
 
   //----------------------------------------------------------------------
   //if new edge is null,--------------------------------------------------
