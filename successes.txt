@@ -3400,3 +3400,5 @@ person,privacy,view film at home,save money,money
 person,run,exercise,play hockey,break bone,play football,money,
 person,run,exercise,play hockey,break bone,play football,money,bank,money place,money
 person,run,exercise,play hockey,break bone,play football,money,buy hamburger,earn money,money
+person,eat,have lunch,cook meal,heat source,car,cost money,money
+person,wait in line,stand,human,horse,play,work,make money,work box office,money,dollar,pay cash,have money,spend money,money

@@ -1,10 +1,9 @@
 2
 13
 /c/en/person
-/c/en/person
-true
-0
-0
+/c/en/pain
+false
+1
 0
 0
 0
@@ -14,32 +13,33 @@ true
 0
 0
 1
+0
 1
 1
 1
-/c/en/name
-/c/en/separate_shower
-/c/en/stressfactors
-/c/en/get_bore_easily
-/c/en/10_on_broadway
-/c/en/guitar
-/c/en/musical_work
-/c/en/100_break_window
-/c/en/exercise
-/c/en/meet_person_at_gym
-/c/en/watch_your_step
-/c/en/lead_horse
-
-name
-separate shower
-stressfactors
-get bore easily
-10 on broadway
-guitar
-musical work
-100 break window
-exercise
-meet person at gym
-watch your step
-lead horse
-
+/c/en/pain
+/c/en/window
+/c/en/religious_tract
+/c/en/file
+/c/en/baseball
+/c/en/short_track
+/c/en/you_wipe_out
+/c/en/time_warp
+/c/en/shiny
+/c/en/upspring
+/c/en/opposite_of_captive
+/c/en/dog
+/c/en/in_family
+pain
+window
+religious tract
+file
+baseball
+short track
+you wipe out
+time warp
+shiny
+upspring
+opposite of captive
+dog
+in family
