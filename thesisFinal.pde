@@ -147,7 +147,8 @@ void draw() {
         text(displayedSuccessArray[i], 15, 60 + i*20);
       }
 
-      if (frameCount % refreshSpeed == 0) {
+      if (frameCount % 15 == 0) {
+      //if (frameCount % refreshSpeed == 0) {
         println(stepper);
         if (!displayedSuccessArray[stepper].equals("")) {
           wave.setAmplitude(0.05);

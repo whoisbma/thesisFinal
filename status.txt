@@ -1,9 +1,8 @@
 2
 13
 /c/en/person
-/c/en/pain
-false
-1
+/c/en/person
+true
 0
 0
 0
@@ -12,34 +11,35 @@ false
 0
 0
 0
-1
 0
 1
-1
-1
-/c/en/pain
-/c/en/window
-/c/en/religious_tract
-/c/en/file
-/c/en/baseball
-/c/en/short_track
-/c/en/you_wipe_out
-/c/en/time_warp
-/c/en/shiny
-/c/en/upspring
-/c/en/opposite_of_captive
-/c/en/dog
-/c/en/in_family
-pain
-window
-religious tract
-file
-baseball
-short track
-you wipe out
-time warp
-shiny
-upspring
-opposite of captive
-dog
-in family
+0
+0
+0
+0
+/c/en/eat
+/c/en/market
+/c/en/bald_eagle
+/c/en/pilot
+/c/en/land_airplane
+/c/en/build_stick_house
+/c/en/child_to_die
+/c/en/walk_around_lake
+/c/en/need_ticket
+/c/en/house
+/c/en/plant
+/c/en/chess_set
+/c/en/king
+eat
+market
+bald eagle
+pilot
+land airplane
+build stick house
+child to die
+walk around lake
+need ticket
+house
+plant
+chess set
+king
