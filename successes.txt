@@ -460,19 +460,19 @@ person,build,fall down,dance,hear music,sing,bow,fun,play game,enjoyment,swim,co
 person,build,fall down,dance,hear music,sing,bow,fun,play game,enjoyment,swim,competition,race,make money,money
 person,sleep at night,rest,chair,seat,hockey game,ice,flower,plant,windowsill,window,open,shop,get money,money
 person,love,emotion,boredom,surf net,be bore,child,play,fun,dance,see band,enjoyment,play sport,money,
-person,love,fee your family,barbecue restaurant,city,cafe,build,house,street,lamp,bulb,buy,gain more land,pay money,money
-person,love,fee your family,barbecue restaurant,city,cafe,build,house,street,lamp,bulb,buy,money,pay money,money
-person,love,fee your family,barbecue restaurant,city,cafe,build,house,street,lamp,bulb,plant in garden,money,pay money,money
-person,love,fee your family,barbecue restaurant,city,cafe,build,house,street,lamp,bulb,seed of some plant,money,pay money,money
-person,love,fee your family,barbecue restaurant,city,cafe,build,house,street,lamp,one room,seed of some plant,money,pay money,money
-person,love,fee your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,seed of some plant,money,pay money,money
-person,love,fee your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,dictionary,money,pay money,money
-person,love,fee your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,dictionary,help to check spell,pay money,money
-person,love,fee your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,literature,help to check spell,pay money,money
-person,love,fee your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,store book,help to check spell,pay money,money
-person,love,fee your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,dust,help to check spell,pay money,money
-person,love,fee your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,literature,help to check spell,pay money,money
-person,love,fee your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,literature,your own home,pay money,money
+person,love,feed your family,barbecue restaurant,city,cafe,build,house,street,lamp,bulb,buy,gain more land,pay money,money
+person,love,feed your family,barbecue restaurant,city,cafe,build,house,street,lamp,bulb,buy,money,pay money,money
+person,love,feed your family,barbecue restaurant,city,cafe,build,house,street,lamp,bulb,plant in garden,money,pay money,money
+person,love,feed your family,barbecue restaurant,city,cafe,build,house,street,lamp,bulb,seed of some plant,money,pay money,money
+person,love,feed your family,barbecue restaurant,city,cafe,build,house,street,lamp,one room,seed of some plant,money,pay money,money
+person,love,feed your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,seed of some plant,money,pay money,money
+person,love,feed your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,dictionary,money,pay money,money
+person,love,feed your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,dictionary,help to check spell,pay money,money
+person,love,feed your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,literature,help to check spell,pay money,money
+person,love,feed your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,store book,help to check spell,pay money,money
+person,love,feed your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,dust,help to check spell,pay money,money
+person,love,feed your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,literature,help to check spell,pay money,money
+person,love,feed your family,barbecue restaurant,city,cafe,build,house,street,lamp,library,literature,your own home,pay money,money
 person,pain,hurt,fall,skate,fall down,go for run,exercise,lose weight,be healthy,become more clean,feel good,help someone,give them money,money
 person,break leg,injury,run marathon,health,exercise,go for swim,fun,play sport,money,paper,index card,piece of paper,money be notting it,money
 person,sing,entertainment,play chess,have fun,play game,sport ball,play baseball,win,play sport,fun,work,get pay,you get money,money
@@ -2864,109 +2864,7 @@ person,die,jump out of window,fall,lose consciousness,go to sleep,relaxation,hea
 person,die,jump out of window,fall,lose consciousness,go to sleep,relaxation,hear music,enjoy music,go to opera,go to concert,exercise,social activity,make money,money
 person,die,jump out of window,fall,lose consciousness,go to sleep,relaxation,hear music,see band,go to opera,go to concert,exercise,social activity,make money,money
 person,die,jump out of window,fall,lose consciousness,go to sleep,relaxation,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,die,jump out of window,fall,lose consciousness,go to sleep,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,die,jump out of window,fall,lose consciousness,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,die,jump out of window,fall,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,die,jump out of window,dispair,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,die,jump out of window,open window,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,die,jump out of window,leave suicide note,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,die,smoke,leave suicide note,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,drown in water,smoke,leave suicide note,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,build,smoke,leave suicide note,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,build,ceiling,leave suicide note,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,build,beam,leave suicide note,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,voice opinion,beam,leave suicide note,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,talk to each other,beam,leave suicide note,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,board plane,beam,leave suicide note,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,water plant,beam,leave suicide note,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,water plant,spill water,leave suicide note,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,water plant,get some water,leave suicide note,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,water plant,make it grow,leave suicide note,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,water plant,make it grow,feed it,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,water plant,make it grow,water your plant,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,water plant,fill water bucket,water your plant,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,thank god,fill water bucket,water your plant,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,fill water bucket,water your plant,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,india,water your plant,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,india,bangalore,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,india,bazaar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,land,bazaar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,privacy,land,bazaar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wind clock,land,bazaar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wind clock,child,bazaar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wind clock,child,laugh at clown,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wind clock,child,save money,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,catch cold,child,save money,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,love,child,save money,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,child,save money,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,drill hole,save money,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,drill hole,look for oil,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,drill hole,look through it,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,drill hole,have drill bite,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,drill hole,you make hole,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,back yard,you make hole,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,make good world,you make hole,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,make good world,side effect,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,make good world,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,die,make good world,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,board plane,make good world,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,feel important,make good world,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,buy car,make good world,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,pain,make good world,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,buy car,make good world,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,be diseased,make good world,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wait in line,make good world,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wait in line,your turn,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wait in line,lose your patience,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wait in line,look ahead,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wait in line,find line,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,climb mountain,find line,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,plant tree,find line,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,fear death,find line,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,headache,find line,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,lose friend,find line,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,kill,find line,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,compliment,find line,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,catch cold,find line,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,believe in god,find line,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,talk to each other,find line,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,feel,find line,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,feel,hope,set example,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,feel,hope,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,feel,be full,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,build,be full,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,be diseased,be full,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,experience joy,be full,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,miss appointment,be full,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,buy car,be full,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,die,be full,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,die,suicidal person,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,die,shoot yourself,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,talk to each other,shoot yourself,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,crowd,shoot yourself,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,crowd,stream into theater,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,crowd,group person,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wear hat,group person,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,catch cold,group person,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,break leg,group person,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,laugh at joke,group person,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wind clock,group person,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wind clock,i,like money in jar,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wind clock,i,san diego,skate,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wind clock,i,san diego,imperial bank tower,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,wind clock,i,san diego,imperial bank tower,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,headache,i,san diego,imperial bank tower,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,student,i,san diego,imperial bank tower,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,student,study,san diego,imperial bank tower,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,student,study,open book,imperial bank tower,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,student,study,open book,tell story,hold my breath,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,student,study,open book,tell story,get it right,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,student,study,open book,tell story,enunciate clearly,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,student,study,open book,tell story,seek to delight,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,student,study,open book,tell story,laughter,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,student,study,open book,when you read,laughter,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,student,study,read book,when you read,laughter,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
-person,student,university,read book,when you read,laughter,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
+person,die,jump out of window,fall,lose consciousperson,student,university,read book,when you read,laughter,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
 person,student,question teacher,read book,when you read,laughter,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
 person,believe in god,question teacher,read book,when you read,laughter,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money
 person,thank god,question teacher,read book,when you read,laughter,lucid dream,do crossword puzzle,see band,go to opera,go to concert,exercise,social activity,make money,money

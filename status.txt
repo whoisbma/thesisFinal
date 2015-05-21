@@ -15,31 +15,31 @@ true
 1
 0
 0
-0
-0
-/c/en/eat
-/c/en/market
-/c/en/bald_eagle
-/c/en/pilot
-/c/en/land_airplane
-/c/en/build_stick_house
-/c/en/child_to_die
-/c/en/walk_around_lake
-/c/en/need_ticket
-/c/en/house
-/c/en/plant
-/c/en/chess_set
-/c/en/king
-eat
-market
-bald eagle
-pilot
-land airplane
-build stick house
-child to die
-walk around lake
-need ticket
-house
-plant
-chess set
-king
+1
+1
+/c/en/love
+/c/en/paradise
+/c/en/heaven/n
+/c/en/cladding
+/c/en/door
+/c/en/car
+/c/en/play
+/c/en/learn
+/c/en/have_understand
+/c/en/commit_to_memory
+/c/en/repeat
+/c/en/write_term_paper
+/c/en/rinse_out_rag
+love
+paradise
+heaven
+cladding
+door
+car
+play
+learn
+have understand
+commit to memory
+repeat
+write term paper
+rinse out rag

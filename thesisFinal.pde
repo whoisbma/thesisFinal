@@ -1,3 +1,4 @@
+
 //several potential problems:
 // OK -  1 - my logic on null and omit skips has an issue, especially if its in the "currentLevel" slot and not just skipping on its way towards it. probably a problem, yes.
 // meh - 2 - it does an extra path search more than necessary during a normal "pull back".
