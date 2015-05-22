@@ -12,34 +12,34 @@ true
 0
 0
 0
-1
-0
 0
 1
 1
-/c/en/love
-/c/en/paradise
-/c/en/heaven/n
-/c/en/cladding
-/c/en/door
-/c/en/car
-/c/en/play
-/c/en/learn
-/c/en/have_understand
-/c/en/commit_to_memory
-/c/en/repeat
+1
+0
+/c/en/slave
+/c/en/city
+/c/en/dallas
+/c/en/bus
+/c/en/timepiece
+/c/en/bravo
+/c/en/band
+/c/en/hold_concert
+/c/en/social_interaction
+/c/en/chat_with_friend
+/c/en/share_new_happen
 /c/en/write_term_paper
-/c/en/rinse_out_rag
-love
-paradise
-heaven
-cladding
-door
-car
-play
-learn
-have understand
-commit to memory
-repeat
+/c/en/use_computer
+slave
+city
+dallas
+bus
+timepiece
+bravo
+band
+hold concert
+social interaction
+chat with friend
+share new happen
 write term paper
-rinse out rag
+use computer

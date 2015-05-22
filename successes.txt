@@ -3300,3 +3300,288 @@ person,run,exercise,play hockey,break bone,play football,money,bank,money place,
 person,run,exercise,play hockey,break bone,play football,money,buy hamburger,earn money,money
 person,eat,have lunch,cook meal,heat source,car,cost money,money
 person,wait in line,stand,human,horse,play,work,make money,work box office,money,dollar,pay cash,have money,spend money,money
+person,kill,revenge,cool off,relax,comfort,view film at home,fun,go to party,get dress,play basketball,make money,money
+person,kill,revenge,cool off,relax,comfort,view film at home,fun,go to party,meet new person,play basketball,make money,money
+person,kill,revenge,cool off,relax,comfort,view film at home,fun,play baseball,meet new person,play basketball,make money,money
+person,kill,revenge,cool off,relax,comfort,view film at home,watch television,play baseball,meet new person,play basketball,make money,money
+person,kill,revenge,cool off,relax,comfort,heater,watch television,play baseball,meet new person,play basketball,make money,money
+person,kill,revenge,cool off,relax,spa,heater,watch television,play baseball,meet new person,play basketball,make money,money
+person,kill,revenge,cool off,relax,paint picture,heater,watch television,play baseball,meet new person,play basketball,make money,money
+person,kill,revenge,cool off,relax,paint picture,sketch idea,watch television,play baseball,meet new person,play basketball,make money,money
+person,kill,revenge,cool off,relax,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,kill,revenge,cool off,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,kill,revenge,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,kill,revenge,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,dance to music,revenge,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,experience joy,revenge,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,two ear,revenge,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,orgasm,revenge,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,be diseased,revenge,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,laugh,revenge,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,break leg,revenge,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,receive gift,revenge,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,board plane,revenge,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,feel,revenge,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,fly,revenge,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,child,revenge,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,child,expensive,commit murder,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,child,expensive,gym equipment,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,child,expensive,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,child,go to school,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,child,curious,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,child,wind clockwork toy,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,society,wind clockwork toy,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,miss appointment,wind clockwork toy,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,wear hat,wind clockwork toy,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,feel important,wind clockwork toy,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,good life,wind clockwork toy,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,sleep at night,wind clockwork toy,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,sail boat,wind clockwork toy,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,dance,wind clockwork toy,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,stupid,wind clockwork toy,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,stupid,sometimes person,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,stupid,most person,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,voice opinion,most person,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,build house,most person,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,run,most person,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,feel,most person,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,captain ship,most person,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,strange,most person,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,slave,most person,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,slave,slave-girl,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,slave,enslavement,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,slave,restrict freedom,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,slave,hang from st,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,think,hang from st,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,laugh at joke,hang from st,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,build house,hang from st,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,drink milk,hang from st,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,drink milk,have asthma attack,it,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,drink milk,have asthma attack,reach for inhaler,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,drink milk,have asthma attack,get short of breath,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,drink milk,infant mammal,get short of breath,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,wind clock,infant mammal,get short of breath,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,fear death,infant mammal,get short of breath,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,society,infant mammal,get short of breath,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,sing,infant mammal,get short of breath,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,die,infant mammal,get short of breath,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,die,end live,get short of breath,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,die,have heart attack,get short of breath,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,die,stop breathe,get short of breath,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,die,check vital sign,get short of breath,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,two ear,check vital sign,get short of breath,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,thank god,check vital sign,get short of breath,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,thank god,single,get short of breath,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,thank god,single,single-handed,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,thank god,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,thank god,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,good thing in life,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,walk on water,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,enter house,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,pay bill,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,build house,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,two ear,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,sail boat,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,captain ship,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,pain,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,fly,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,visit place,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,believe in god,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,talk to each other,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,taste food,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,bore job,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,sleep at night,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,build,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,solve problem,single,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,solve problem,study,single-issue,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,solve problem,study,dictionary,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,solve problem,study,headache,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,mammal,study,headache,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,love,study,headache,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,good life,study,headache,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,sing,study,headache,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,cook dinner,study,headache,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,catch cold,study,headache,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,experience joy,study,headache,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,captain ship,study,headache,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,headache,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,sprinkler on lawn,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,paint picture,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,laugh,buy paint,watch television,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,laugh,read newspaper,watch television,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,laugh,read newspaper,buy it,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,laugh,read newspaper,kill time,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,turn television on,read newspaper,kill time,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,be entertain,read newspaper,kill time,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,be entertain,chat with friend,kill time,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,be entertain,chat with friend,feel safe,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,be entertain,chat with friend,relax,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,be entertain,surf net,relax,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,be entertain,go to performance,relax,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,be entertain,go to performance,hang with performer,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,be entertain,do crossword puzzle,hang with performer,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,you to be awake,do crossword puzzle,hang with performer,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,electricity,do crossword puzzle,hang with performer,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,electricity,toy store,hang with performer,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,electricity,toy store,model airplane kit,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,electricity,toy store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,watch television,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,porch,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,bite,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,run,dog,bite,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,captain ship,dog,bite,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,burn,dog,bite,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,clothe,dog,bite,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,crowd,dog,bite,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,feel,dog,bite,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,crowd,dog,bite,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,good thing in life,dog,bite,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,be burn,dog,bite,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,eat meat,dog,bite,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,get sick,dog,bite,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,thank god,dog,bite,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,thank god,one,bite,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,thank god,one,overfill teapot,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,thank god,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,build house,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,think,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,hangnail,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,be diseased,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,sing,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,pay bill,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,compliment,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,compliment,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,human,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,feel,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,receive gift,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,feel,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,eat,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,build,one,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,build,book,create orgasm alone,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,build,book,monkey,hound dog,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,build,book,monkey,madagascar,electricity,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,build,book,monkey,madagascar,television show,store,yoyo,play baseball,meet new person,play basketball,make money,money
+person,build,book,monkey,madagascar,television show,48 hour,yoyo,play baseball,meet new person,play basketball,make money,money
+person,build,book,monkey,madagascar,television show,0137,yoyo,play baseball,meet new person,play basketball,make money,money
+person,build,book,monkey,laboratory,television show,0137,yoyo,play baseball,meet new person,play basketball,make money,money
+person,build,book,monkey,ohio,television show,0137,yoyo,play baseball,meet new person,play basketball,make money,money
+person,build,book,monkey,ohio,beaver,0137,yoyo,play baseball,meet new person,play basketball,make money,money
+person,build,book,monkey,ohio,beaver,stew,yoyo,play baseball,meet new person,play basketball,make money,money
+person,build,book,monkey,ohio,beaver,stew,potato,play baseball,meet new person,play basketball,make money,money
+person,build,book,monkey,ohio,beaver,stew,potato,tin foil,meet new person,play basketball,make money,money
+person,build,book,monkey,ohio,beaver,stew,potato,farmland,meet new person,play basketball,make money,money
+person,build,book,monkey,ohio,beaver,stew,potato,casserole,meet new person,play basketball,make money,money
+person,build,book,monkey,ohio,beaver,stew,potato,blind,meet new person,play basketball,make money,money
+person,build,book,monkey,ohio,beaver,stew,potato,blind,meet new person,play basketball,make money,money
+person,build,book,monkey,ohio,farmhouse,stew,potato,blind,meet new person,play basketball,make money,money
+person,build,book,monkey,friend house,farmhouse,stew,potato,blind,meet new person,play basketball,make money,money
+person,build,book,monkey,tree,farmhouse,stew,potato,blind,meet new person,play basketball,make money,money
+person,build,book,monkey,tree,climb,stew,potato,blind,meet new person,play basketball,make money,money
+person,build,book,monkey,tree,climb,go up hill,potato,blind,meet new person,play basketball,make money,money
+person,build,book,monkey,tree,climb,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,build,book,monkey,tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,build,book,monkey,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,build,book,dictionary,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,build,lamp,dictionary,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,sleep at night,lamp,dictionary,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,talk to each other,lamp,dictionary,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,sing,lamp,dictionary,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,break leg,lamp,dictionary,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,catch cold,lamp,dictionary,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,lose friend,lamp,dictionary,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,experience joy,lamp,dictionary,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,compliment,lamp,dictionary,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,society,lamp,dictionary,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,captain ship,lamp,dictionary,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,pain,lamp,dictionary,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,pain,release your energy,dictionary,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,pain,release your energy,run fast,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,pain,release your energy,expend effort,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,pain,release your energy,relieve stress,hang from tree,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,pain,release your energy,relieve stress,get exercise,evergreen,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,pain,release your energy,relieve stress,get exercise,get muscular body,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,pain,release your energy,relieve stress,get exercise,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,pain,release your energy,relieve stress,go for walk,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,pain,release your energy,jog,go for walk,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,bore job,release your energy,jog,go for walk,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,drown in water,release your energy,jog,go for walk,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,sex in bed,release your energy,jog,go for walk,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,play game,release your energy,jog,go for walk,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,sleep,release your energy,jog,go for walk,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,name,release your energy,jog,go for walk,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,student,release your energy,jog,go for walk,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,student,class,jog,go for walk,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,student,class,knowledge,go for walk,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,student,class,knowledge,read newspaper,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,student,class,knowledge,take stand,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,be fit,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,trauma,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,travel,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,close your eye,use of climb gear,potato,blind,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,close your eye,bed,potato,blind,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,close your eye,bed,flat,blind,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,close your eye,bed,flat,plate,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,close your eye,bed,flat,disk,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,close your eye,bed,cat,disk,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,close your eye,rest,cat,disk,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,close your eye,go to sleep,cat,disk,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,close your eye,go to sleep,get rest,disk,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,close your eye,go to sleep,use bed,disk,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,close your eye,go to sleep,fall asleep,disk,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,close your eye,go to sleep,fall asleep,go see play,meet new person,play basketball,make money,money
+person,student,class,knowledge,remember,close your eye,go to sleep,fall asleep,go see play,you,play basketball,make money,money
+person,student,class,knowledge,remember,close your eye,go to sleep,fall asleep,go see play,you,lead horse to water,make money,money
+person,student,class,knowledge,remember,close your eye,go to sleep,fall asleep,go see play,you,key to open lock,make money,money
+person,student,class,knowledge,remember,close your eye,go to sleep,fall asleep,go see play,you,me,make money,money
+person,play game,learn new skill,improve yourself,take bath,relaxation,bean bag chair,live room,sit in,go to movie,see excite story,entertainment,buy something,spend money,money
+person,play game,learn new skill,improve yourself,take bath,relaxation,bean bag chair,live room,sit in,go to movie,see excite story,entertainment,do crossword puzzle,spend money,money
+person,play game,learn new skill,improve yourself,take bath,relaxation,bean bag chair,live room,sit in,go to movie,see excite story,entertainment,play football,spend money,money
+person,pain,exercise,rest,relaxation,enjoy day,take shower,get naked,have bath,pleasure,go to play,sit down,go see play,money,
+person,die,live,house,window,door,locker,sometimes,coin,bank,financial,go shop,buy something small,money,
+person,die,live,house,window,door,locker,sometimes,coin,bank,financial,go shop,buy something small,money,
+person,die,live,house,window,door,locker,sometimes,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,window,door,locker,lock,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,window,door,lock in prison,lock,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,window,door,next house,lock,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,window,door,your neighbor,lock,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,window,face mountain,your neighbor,lock,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,window,shade,your neighbor,lock,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,window,shade,leaf,lock,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,window,shade,leaf,cover up,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,window,shade,leaf,green,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,window,shade,leaf,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,window,most bedroom,leaf,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,kitchenette,most bedroom,leaf,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,clothe,most bedroom,leaf,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,clothe,suitcase,leaf,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,clothe,suitcase,heat pad,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,clothe,suitcase,partition,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,clothe,suitcase,lose by airline,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,clothe,suitcase,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,clothe,go jog,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,build,go jog,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,coffee,go jog,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,coffee,caffiene,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,coffee,taste bitter,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,house,wood,taste bitter,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,home,wood,taste bitter,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,skydive,wood,taste bitter,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,live,room,wood,taste bitter,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,you be old,room,wood,taste bitter,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,have heart attack,room,wood,taste bitter,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,have heart attack,take aspirin,wood,taste bitter,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,die,stop breathe,take aspirin,wood,taste bitter,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,sail boat,stop breathe,take aspirin,wood,taste bitter,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,eat,stop breathe,take aspirin,wood,taste bitter,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,eat,kosher restaurant,take aspirin,wood,taste bitter,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,eat,kosher restaurant,jew,wood,taste bitter,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,eat,kosher restaurant,jew,classroom,taste bitter,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,eat,kosher restaurant,jew,classroom,paper,shave kit,not hot,coin,flip,financial,go shop,buy something small,money,
+person,eat,kosher restaurant,jew,classroom,paper,wood,not hot,coin,flip,financial,go shop,buy something small,money,
+person,eat,kosher restaurant,jew,classroom,paper,wood,brown,coin,flip,financial,go shop,buy something small,money,
+person,eat,kosher restaurant,jew,classroom,paper,wood,brown,color,flip,financial,go shop,buy something small,money,
+person,eat,kosher restaurant,jew,classroom,paper,wood,brown,color,desk,financial,go shop,buy something small,money,
+person,eat,kosher restaurant,jew,classroom,paper,wood,brown,color,desk,notebook,go shop,buy something small,money,
+person,eat,kosher restaurant,jew,classroom,paper,wood,brown,color,desk,notebook,computer,buy something small,money,
+person,eat,kosher restaurant,jew,classroom,paper,wood,brown,color,desk,notebook,computer,grocery store,money,
+person,climb mountain,fun,child,toy,play,be bore,take in film,be entertain,go see film,money,spend money,grocery shop,bring some money,money

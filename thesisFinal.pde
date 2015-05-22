@@ -82,7 +82,7 @@ void setup() {
 
   println(Serial.list());
   println();
-  port = new Serial(this, Serial.list()[7], 9600);
+  port = new Serial(this, Serial.list()[3], 9600);
   port.bufferUntil('\n');
   clearAllLCDs();
   background(250);
